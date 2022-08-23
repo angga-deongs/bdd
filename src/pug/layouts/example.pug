@@ -1,0 +1,19 @@
+//-------------------------------------------------------------------------------
+  @name: Blog Banner
+  -------------------------------------------------------------------------------//
+
+//blog-banner
+.example
+  .container
+    .example__head
+      h1.example__title
+        | !{data.title}
+      p.example__desc
+        | !{data.desc}
+    h3.example__subtitle
+      | !{data.subtitle}
+    .example__body
+      each val in data.list
+        -
+          data = val
+        include ../components/example.pug
