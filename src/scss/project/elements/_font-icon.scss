@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Elements Font Icon
+   ========================================================================== */
+
+.fi {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "Bintaro-Design-District" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fi-arrow-down:before {
+  content: "\e900";
+}
+.fi-arrow-right:before {
+  content: "\e901";
+}
+.fi-close:before {
+  content: "\e902";
+}
+.fi-copy:before {
+  content: "\e903";
+}
+.fi-fb:before {
+  content: "\e904";
+}
+.fi-ig:before {
+  content: "\e905";
+}
+.fi-mail:before {
+  content: "\e906";
+}
+.fi-search:before {
+  content: "\e907";
+}
+.fi-tw:before {
+  content: "\e908";
+}
+.fi-wa:before {
+  content: "\e909";
+}
