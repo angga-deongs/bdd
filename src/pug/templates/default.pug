@@ -128,11 +128,19 @@ html(lang='en')
 
   body(class=holdTransitionClass)
 
+    //-header
+    include ../layouts/header.pug
+
+    ='\n\n'
+
+    //main-site
     .main-site.main-site--hide.js-main-site
       //- site-content
       block siteContent
+    ///main-site
 
     ='\n\n'
+
     if schema.enable
       // schema organization
       script(type='application/ld+json').
