@@ -3,10 +3,12 @@
    ========================================================================== */
 
 $font-primary: "UniversLTStd";
+$font-secondary: "UniversLTStd-Ex";
 
 // Font
 $font: (
   family-primary: $font-primary,
+  family-secondary: $font-secondary,
   logo: (
     font-size: 1.9rem,
     line-height: 2.4rem,

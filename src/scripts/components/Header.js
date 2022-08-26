@@ -1,24 +1,20 @@
 /* ------------------------------------------------------------------------------
-@name: Example
-@description: Example
+@name: Header
+@description: Header
 --------------------------------------------------------------------------------- */
 
-const Example = (() => {
-
-  // - handleSayHello
-  const handleSayHello = () => {
-    console.log('hello example');
-  }
+const Header = (() => {
+  // - handleSet
+  const handleSet = () => {};
 
   // - init
   const init = () => {
-    handleSayHello();
-  }
+    handleSet();
+  };
 
   return {
-    init
-  }
-
+    init,
+  };
 })();
 
-export default Example
+export default Header;

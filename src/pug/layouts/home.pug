@@ -2,3 +2,33 @@
   @name: Home
   -------------------------------------------------------------------------------//
 
+//home
+.home
+  .container
+    .home__content
+      //home-nav
+      section.home__nav
+        include nav.pug
+      each val in data.posts
+        //home-posts
+        section.home__posts
+          //home-posts-head
+          .home__posts__head
+            =`\n`
+            button.home__category(type='button')
+              =`\n`
+              span.home__category__name !{val.title}
+              =`\n`
+              i.fi.fi-arrow-down
+              if val.current
+                =`\n`
+                span.home__category__current !{val.current}
+              =`\n`
+            ul.home__sub-category
+              each subcategory in val.category
+                li.home__sub-category__item !{subcategory.name}
+          //home-posts-list
+          .home__posts__list
+            each item in val.list
+              include ../components/card-primary.pug
+///home

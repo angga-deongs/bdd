@@ -3,8 +3,7 @@
 @description: Indexing all components
 --------------------------------------------------------------------------------- */
 
-import Example from "./Example";
+import Header from "./Header";
+import Search from "./Search";
 
-export {
-  Example
-};
+export { Header, Search };

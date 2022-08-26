@@ -24,32 +24,32 @@ body {
 
 h1 {
   @include font-size(h1);
-  font-weight: fw(bold);
+  font-weight: fw(regular);
 }
 
 h2 {
   @include font-size(h2);
-  font-weight: fw(bold);
+  font-weight: fw(regular);
 }
 
 h3 {
   @include font-size(h3);
-  font-weight: fw(bold);
+  font-weight: fw(regular);
 }
 
 h4 {
   @include font-size(h4);
-  font-weight: fw(bold);
+  font-weight: fw(regular);
 }
 
 h5 {
   @include font-size(h5);
-  font-weight: fw(bold);
+  font-weight: fw(regular);
 }
 
 h6 {
   @include font-size(h6);
-  font-weight: fw(bold);
+  font-weight: fw(regular);
 }
 
 p,

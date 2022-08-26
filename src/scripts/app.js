@@ -1,27 +1,22 @@
 // --- utilities
-import {
-  Scrolllable,
-  BrowserCheck
-} from 'utilities';
+import { Scrolllable, BrowserCheck } from "utilities";
 
 // --- components
-import {
-  Example
-} from 'components';
+import { Header, Search } from "components";
 
 // --- App
 const App = (() => {
   // --- run transition
   const runTransition = () => {
-    $('body').removeClass('hold-transition');
-  }
+    $("body").removeClass("hold-transition");
+  };
 
   // --- show site content
   const showSiteContent = () => {
-    $('.js-main-site').removeClass('main-site--hide');
+    $(".js-main-site").removeClass("main-site--hide");
     // --- disable scroll
     Scrolllable.enable();
-  }
+  };
 
   // --- ready
   const ready = () => {
@@ -35,30 +30,28 @@ const App = (() => {
       BrowserCheck.init();
 
       // --- Project
-      Example.init();
+      Header.init();
+      Search.init();
     })(jQuery);
-  }
+  };
 
   // --- load
   const load = () => {
     (($) => {
-      $(window).on("load", () => {
-
-      });
+      $(window).on("load", () => {});
     })(jQuery);
-  }
+  };
 
   // --- init
   const init = () => {
     load();
     ready();
-  }
+  };
 
   // --- return
   return {
-    init
-  }
-
+    init,
+  };
 })();
 
 // ---  run main js

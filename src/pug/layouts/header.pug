@@ -6,12 +6,16 @@
 header.header
   .container
     .header__content
-      h1.header__txt BINTARO DESIGN DISTRICT 2020
-      .header__search
+      h1.header__txt BINTARO DESIGN DISTRICT
+        span 2020
+      =`\n`
+      form.header__search.js-header-search
         =`\n`
-        button.header__search__btn
-          | Search
+        input.header__search__bar(type='search' name='s' placeholder='ENTER A SEARCH TERM...' autocomplete='off')/
+        =`\n`
+        button.header__search__btn.btn(type='submit')
+          =`\n`
+          span Search
+          =`\n`
           i.fi.fi-search
-        =`\n`
-        input.header__search__bar(type='search' name='s' placeholder='ENTER A SEARCH TERM...')
 ///header
