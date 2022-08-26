@@ -5,5 +5,6 @@
 
 import Header from "./Header";
 import Search from "./Search";
+import Home from "./Home";
 
-export { Header, Search };
+export { Header, Search, Home };

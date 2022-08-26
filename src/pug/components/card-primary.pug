@@ -5,6 +5,9 @@
 //card-primary
 .card-primary
   .card-primary__box
+    =`\n`
+    a.card-primary__link(href='#') !{item.title}
+    =`\n`
     figure.card-primary__img
       =`\n`
       img.card-primary__img__el(src='assets/img/dummy/'+item.img, alt=item.title)/

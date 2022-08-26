@@ -2,7 +2,7 @@
 import { Scrolllable, BrowserCheck } from "utilities";
 
 // --- components
-import { Header, Search } from "components";
+import { Header, Search, Home } from "components";
 
 // --- App
 const App = (() => {
@@ -32,6 +32,7 @@ const App = (() => {
       // --- Project
       Header.init();
       Search.init();
+      Home.init();
     })(jQuery);
   };
 

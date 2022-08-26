@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Components Card Primary
+   ========================================================================== */
+
+.card-primary {
+  &__box {
+    position: relative;
+  }
+  &__img {
+    margin: 0 0 17px;
+    &__el {
+      width: 100%;
+    }
+  }
+  &__title {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: fw(light);
+    margin-bottom: 8px;
+  }
+  &__date {
+    color: color(grey);
+    margin-bottom: 4px;
+    letter-spacing: 0.15em;
+    font-weight: fw(light);
+  }
+  &__tag {
+    color: color(primary);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: fw(light);
+    margin-bottom: 8px;
+  }
+  &__desc {
+    margin-bottom: 0;
+    letter-spacing: 0.03em;
+    font-weight: fw(light);
+  }
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: zi(card-primary-link);
+  }
+}

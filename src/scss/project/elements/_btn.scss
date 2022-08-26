@@ -5,8 +5,32 @@
 .btn {
   border: 0;
   outline: 0;
+  padding: 0;
   text-decoration: none;
   background-color: transparent;
-  letter-spacing: 0.03em;
-  color: color(black);
+  transition: all 0.3s ease;
+  display: inline-block;
+  vertical-align: middle;
+  &--primary {
+    letter-spacing: 0.03em;
+    color: color(black);
+    letter-spacing: 0.03em;
+    padding: 9px 14px;
+    font-weight: fw(light);
+    border-radius: 2px;
+    min-width: 77px;
+    border: 1px solid color(black);
+    &:hover {
+      background-color: color(silver);
+    }
+  }
+  &--secondary {
+    color: color(primary);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: fw(light);
+    .fi {
+      font-size: 5px;
+    }
+  }
 }

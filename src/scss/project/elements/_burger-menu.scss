@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Elements Burger Menu
+   ========================================================================== */
+
+.burger-menu {
+  width: 34px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  &__bar {
+    display: block;
+    width: 34px;
+    height: 1px;
+    border-radius: 1px;
+    background-color: color(black);
+    margin-bottom: 12px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
