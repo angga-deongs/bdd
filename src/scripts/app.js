@@ -1,5 +1,5 @@
 // --- utilities
-import { Scrolllable, BrowserCheck } from "utilities";
+import { Scrollable, BrowserCheck } from "utilities";
 
 // --- components
 import { Header, Search, Home } from "components";
@@ -15,14 +15,14 @@ const App = (() => {
   const showSiteContent = () => {
     $(".js-main-site").removeClass("main-site--hide");
     // --- disable scroll
-    Scrolllable.enable();
+    Scrollable.enable();
   };
 
   // --- ready
   const ready = () => {
     (($) => {
       // --- disable scroll
-      Scrolllable.disable();
+      Scrollable.disable();
 
       // --- Global
       runTransition();

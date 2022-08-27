@@ -1,26 +1,25 @@
 /* ------------------------------------------------------------------------------
-@name: Scrolllable
-@description: Scrolllable
+@name: Scrollable
+@description: Scrollable
 --------------------------------------------------------------------------------- */
 
-// --- Scrolllable
-const Scrolllable = (() => {
+// --- Scrollable
+const Scrollable = (() => {
   // --- handleEnable
   const handleEnable = () => {
-    $('body').removeClass('rm-scroll');
-  }
+    $("body").removeClass("rm-scroll");
+  };
 
   // --- handleDisable
   const handleDisable = () => {
-    $('body').addClass('rm-scroll');
-  }
+    $("body").addClass("rm-scroll");
+  };
 
   // --- return
   return {
     enable: handleEnable,
-    disable: handleDisable
-  }
-
+    disable: handleDisable,
+  };
 })();
 
-export default Scrolllable;
+export default Scrollable;

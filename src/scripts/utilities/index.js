@@ -3,16 +3,10 @@
 @description: Indexing all utilities
 --------------------------------------------------------------------------------- */
 
-import isOS from './isOS';
-import BrowserCheck from './BrowserCheck';
-import Scrolllable from './Scrolllable';
-import Validation from './Validation';
-import Session from './Session';
+import isOS from "./isOS";
+import BrowserCheck from "./BrowserCheck";
+import Scrollable from "./Scrollable";
+import Validation from "./Validation";
+import Session from "./Session";
 
-export {
-  isOS,
-  BrowserCheck,
-  Scrolllable,
-  Validation,
-  Session
-};
+export { isOS, BrowserCheck, Scrollable, Validation, Session };

@@ -4,7 +4,7 @@
 
 body {
   font-family: ff(primary);
-  font-weight: fw(regular);
+  font-weight: fw(light);
   background-color: color(white);
   color: color(black);
   @include font-size(body);
@@ -23,32 +23,32 @@ body {
 
 h1 {
   @include font-size(h1);
-  font-weight: fw(regular);
+  font-weight: fw(light);
 }
 
 h2 {
   @include font-size(h2);
-  font-weight: fw(regular);
+  font-weight: fw(light);
 }
 
 h3 {
   @include font-size(h3);
-  font-weight: fw(regular);
+  font-weight: fw(light);
 }
 
 h4 {
   @include font-size(h4);
-  font-weight: fw(regular);
+  font-weight: fw(light);
 }
 
 h5 {
   @include font-size(h5);
-  font-weight: fw(regular);
+  font-weight: fw(light);
 }
 
 h6 {
   @include font-size(h6);
-  font-weight: fw(regular);
+  font-weight: fw(light);
 }
 
 p,

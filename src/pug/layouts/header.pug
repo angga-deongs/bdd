@@ -115,48 +115,49 @@
 
 //header
 header.header
-  .header__top
-    =`\n`
-    a.header__logo(href='#')
+  .header__content
+    .header__top
       =`\n`
-      img.header__logo__el(src='assets/img/logo/bintaro-design-district-white.svg', alt='bdd')/
-    =`\n`
-    button.js-header-close(type='button')
+      a.header__logo(href='#')
+        =`\n`
+        img.header__logo__el(src='assets/img/logo/bintaro-design-district-white-logo.svg', alt='bdd')/
       =`\n`
-      i.fi.fi-close
-  .header__menu
-    nav.header__nav
-      ul.header__list
-        each val in header.events
-          li.header__item(class=val.subcategory ? 'has-sub-category' : '')
-            =`\n`
-            a.header__link(href=val.to)
-              | !{val.category}
+      button.header__close.btn.js-close-mobile-menu(type='button')
+        =`\n`
+        i.fi.fi-close
+    .header__menu.js-header-menu
+      nav.header__nav
+        ul.header__list
+          each val in header.events
+            li.header__item(class=val.subcategory ? 'has-sub-category' : '')
+              =`\n`
+              a.header__link(href=val.to)
+                | !{val.category}
+                if val.subcategory
+                  i.fi.fi-arrow-down
               if val.subcategory
-                i.fi.fi-arrow-down
-            if val.subcategory
-              ul.header__sub-category__list
-                each item in val.subcategory
-                  li.header__sub-category__item
-                    =`\n`
-                    a.header__sub-category__link(href=item.to) !{item.name}
-      ul.header__list
-        each val in header.pages
-          li.header__item
+                ul.header__sub-category__list
+                  each item in val.subcategory
+                    li.header__sub-category__item
+                      =`\n`
+                      a.header__sub-category__link(href=item.to) !{item.name}
+        ul.header__list
+          each val in header.pages
+            li.header__item
+              =`\n`
+              a.header__link(href=val.to) !{val.title}
+        ul.header__list
+          each val in header.external
+            li.header__item
+              =`\n`
+              a.header__link(href=val.to) !{val.title}
+    .header__bottom
+      ul.header__socmed
+        each val in header.socmed
+          li.header__socmed__item
             =`\n`
-            a.header__link(href=val.to) !{val.title}
-      ul.header__list
-        each val in header.external
-          li.header__item
-            =`\n`
-            a.header__link(href=val.to) !{val.title}
-  .header__bottom
-    ul.header__socmed
-      each val in header.socmed
-        li.header__socmed__item
-          =`\n`
-          a.header__socmed__link(href=val.to)
-            =`\n`
-            i.fi(class='fi-'+val.icon)
-    p.header__copyright !{header.copyright}
+            a.header__socmed__link(href=val.to)
+              =`\n`
+              i.fi(class='fi-'+val.icon)
+      p.header__copyright !{header.copyright}
 ///header

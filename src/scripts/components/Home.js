@@ -9,22 +9,22 @@ const Home = (() => {
     $(".js-home-posts-category").on("click", (e) => {
       const _this = $(e.currentTarget);
       const _parents = _this.parents(".home__head");
-      if (_parents.hasClass("show-sub-category")) {
-        _parents.removeClass("show-sub-category");
+      if (_parents.hasClass("show-dropdown")) {
+        _parents.removeClass("show-dropdown");
       } else {
-        _parents.addClass("show-sub-category");
+        _parents.addClass("show-dropdown");
         if (
           _this
             .parents(".home__posts")
             .siblings(".home__posts")
             .find(".home__head")
-            .hasClass("show-sub-category")
+            .hasClass("show-dropdown")
         ) {
           _this
             .parents(".home__posts")
             .siblings(".home__posts")
             .find(".home__head")
-            .removeClass("show-sub-category");
+            .removeClass("show-dropdown");
         }
       }
     });

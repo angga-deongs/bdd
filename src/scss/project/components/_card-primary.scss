@@ -15,26 +15,22 @@
   &__title {
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    font-weight: fw(light);
     margin-bottom: 8px;
   }
   &__date {
     color: color(grey);
     margin-bottom: 4px;
     letter-spacing: 0.15em;
-    font-weight: fw(light);
   }
   &__tag {
     color: color(primary);
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    font-weight: fw(light);
     margin-bottom: 8px;
   }
   &__desc {
     margin-bottom: 0;
     letter-spacing: 0.03em;
-    font-weight: fw(light);
   }
   &__link {
     position: absolute;

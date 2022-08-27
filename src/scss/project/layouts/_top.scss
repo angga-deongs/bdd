@@ -62,7 +62,6 @@ Layouts: Top
       border: 0;
       outline: 0;
       padding: 0;
-      font-weight: fw(light);
       letter-spacing: 0.15em;
       color: color(primary);
       transition: all 0.3s ease;
@@ -87,9 +86,10 @@ Layouts: Top
       }
     }
     .fi-search {
-      font-size: 11px;
+      font-size: 1.1rem;
       display: inline-block;
       vertical-align: middle;
+      margin-top: -4px;
     }
   }
 }
