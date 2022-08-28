@@ -1,0 +1,11 @@
+extends ../templates/default.pug
+
+//- Head
+block siteHeader
+  -
+    siteTitle = 'Participants';
+
+//- Body
+block siteContent
+  //- Participants
+  include participants/participants.pug

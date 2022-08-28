@@ -3,13 +3,13 @@
   -------------------------------------------------------------------------------//
 
 //home
-section.home
+.home
   .container
     .home__content
       //home-nav
       section.home__side
         include sidenav.pug
-        include ../components/upcoming-events
+        include ../components/upcoming-events.pug
       each val in data.posts
         //home-posts
         section.home__posts

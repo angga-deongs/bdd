@@ -1,0 +1,50 @@
+//-------------------------------------------------------------------------------
+  @name: Pagination
+  -------------------------------------------------------------------------------//
+
+//pagination
+.pagination
+  .container
+    ul
+      li
+        ='\n'
+        a.prev.page-numbers(href='#')
+          ='\n'
+          span
+            | PREV
+          ='\n'
+      li
+        ='\n'
+        span.page-numbers.current 1
+        ='\n'
+      li
+        ='\n'
+        a.page-numbers(href="#") 2
+        ='\n'
+      li
+        ='\n'
+        a.page-numbers(href="#") 3
+        ='\n'
+      li
+        ='\n'
+        span.page-numbers.dots ...
+        ='\n'
+      li
+        ='\n'
+        a.page-numbers(href="#") 9
+        ='\n'
+      li
+        ='\n'
+        a.page-numbers(href="#") 10
+        ='\n'
+      li
+        ='\n'
+        a.page-numbers(href="#") 11
+        ='\n'
+      li
+        ='\n'
+        a.next.page-numbers(href='#')
+          ='\n'
+          span
+            | NEXT
+///pagination
