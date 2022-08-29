@@ -33,9 +33,15 @@ Layouts: Home
   &__category {
     display: flex;
     align-items: center;
+    @include ellipsis;
     &__name {
       margin-right: 12px;
       @include font-size(h2);
+    }
+    .fi-arrow-right {
+      width: 8px;
+      font-size: 0.8rem;
+      margin-top: -2px;
     }
     .fi-arrow-down {
       width: 8px;
@@ -92,6 +98,7 @@ Layouts: Home
     margin-left: 10px;
     letter-spacing: 0.15em;
     @include font-size(h4);
+    @include ellipsis;
   }
   &__list {
     margin-bottom: 68px;

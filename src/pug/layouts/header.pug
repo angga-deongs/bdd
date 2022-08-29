@@ -137,6 +137,7 @@ header.header
                 | !{val.category}
                 if val.subcategory
                   i.fi.fi-arrow-down
+                  =`\n`
               if val.subcategory
                 ul.header__sub-category__list
                   each item in val.subcategory
@@ -161,5 +162,6 @@ header.header
             a.header__socmed__link(href=val.to)
               =`\n`
               i.fi(class='fi-'+val.icon)
+              =`\n`
       p.header__copyright !{header.copyright}
 ///header
