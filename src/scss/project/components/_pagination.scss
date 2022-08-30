@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Components Pagination
+   ========================================================================== */
+
+.pagination {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+  }
+  li {
+    margin-right: 12px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+    &:hover {
+      color: color(primary);
+    }
+  }
+  .current {
+    color: color(primary);
+  }
+}

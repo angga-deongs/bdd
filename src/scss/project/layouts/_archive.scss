@@ -1,0 +1,98 @@
+/* ==========================================================================
+   Layouts: Archive
+   ========================================================================== */
+
+.archive {
+  &__content {
+    display: flex;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  &__side,
+  &__posts,
+  &__related {
+    height: 100vh;
+    border-right: 1px solid color(grey);
+    padding: 76px 20px 80px;
+    @include scroll("y", auto, "hide");
+    &:last-child {
+      border-right: 0;
+    }
+  }
+  &__side {
+    flex: 0 0 25%;
+    &__title {
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      color: color(primary);
+    }
+    &__list {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+    &__item {
+      transition: all 0.3s ease;
+      margin-bottom: 5px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &.active,
+      &:hover {
+        color: color(primary);
+      }
+    }
+    &__link {
+      letter-spacing: 0.15em;
+      font-weight: fw(light);
+      text-decoration: none;
+      @include font-size(h1);
+    }
+  }
+  &__posts {
+    flex: 0 0 50%;
+  }
+  &__related {
+    flex: 0 0 25%;
+    &__title {
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 82px;
+    }
+    &__content {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: fw(regular);
+        letter-spacing: 0.15em;
+        margin-bottom: 5px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      p {
+        margin-bottom: 40px;
+        letter-spacing: 0.03em;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  &__head {
+    margin-bottom: 82px;
+  }
+  &__title {
+    text-transform: uppercase;
+    color: color(primary);
+    letter-spacing: 0.15em;
+    margin-bottom: 0;
+  }
+  &__body {
+    @include the-content;
+  }
+}

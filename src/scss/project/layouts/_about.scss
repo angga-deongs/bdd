@@ -1,8 +1,8 @@
 /* ==========================================================================
-   Layouts: Single
+   Layouts: About
    ========================================================================== */
 
-.single {
+.about {
   &__content {
     display: flex;
     margin-left: -20px;
@@ -21,6 +21,30 @@
   }
   &__side {
     flex: 0 0 25%;
+    &__list {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+    &__item {
+      transition: all 0.3s ease;
+      margin-bottom: 10px;
+      line-height: 1;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &.active,
+      &:hover {
+        color: color(primary);
+      }
+    }
+    &__link {
+      letter-spacing: 0.25em;
+      font-weight: fw(light);
+      text-decoration: none;
+      text-transform: uppercase;
+      @include font-size(h3-b);
+    }
   }
   &__posts {
     flex: 0 0 50%;
@@ -32,59 +56,30 @@
       letter-spacing: 0.15em;
       margin-bottom: 82px;
     }
-    &__list {
-      margin-bottom: 68px;
+  }
+  &__img {
+    margin: 0 0 29px;
+    &__el {
+      width: 100%;
     }
   }
   &__head {
     margin-bottom: 82px;
   }
-  &__category {
+  &__title {
     text-transform: uppercase;
     color: color(primary);
     letter-spacing: 0.15em;
     margin-bottom: 0;
   }
-  &__img {
-    margin: 0 0 30px;
-    &__el {
-      width: 100%;
-    }
-  }
-  &__title {
+  &__body__title {
+    text-transform: uppercase;
     color: color(primary);
     letter-spacing: 0.15em;
-    text-transform: uppercase;
+    margin-bottom: 40px;
     @include font-size(h1);
-    margin-bottom: 9px;
-  }
-  &__info {
-    display: flex;
-    margin-bottom: 20px;
-  }
-  &__date {
-    margin-right: 24px;
-    letter-spacing: 0.15em;
-    color: color(grey);
-  }
-  &__tag {
-    color: color(primary);
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
   }
   &__txt {
-    max-width: 94.084%;
     @include the-content;
-    h1,
-    h2 {
-      font-weight: fw(light);
-      letter-spacing: 0.15em;
-    }
-  }
-  .card-primary {
-    margin-bottom: 42px;
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
 }

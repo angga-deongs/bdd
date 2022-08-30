@@ -2,7 +2,7 @@
 import { Scrollable, BrowserCheck } from "utilities";
 
 // --- components
-import { Header, Search, Home, Sort } from "components";
+import { Header, Search, Home, Sort, Category } from "components";
 
 // --- App
 const App = (() => {
@@ -34,6 +34,7 @@ const App = (() => {
       Search.init();
       Home.init();
       Sort.init();
+      Category.init();
     })(jQuery);
   };
 

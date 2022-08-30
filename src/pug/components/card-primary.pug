@@ -6,7 +6,10 @@
 .card-primary
   .card-primary__box
     =`\n`
-    a.card-primary__link(href='single.html') !{item.title}
+    if item.date
+      a.card-primary__link(href='single.html') !{item.title}
+    else
+      a.card-primary__link(href='single-participants.html') !{item.title}
     =`\n`
     figure.card-primary__img
       =`\n`

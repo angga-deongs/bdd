@@ -10,13 +10,13 @@
         include sidenav.pug
         .sponsors__side__content
           p !{data.desc}
-      section.sponsors__middle
+      section.sponsors__posts
         .sponsors__head
           h2.sponsors__title sponsors
         .sponsors__body
           each val in data.list
             .sponsors__row
-              h2.sponsors__txt !{val.title}
+              h3.sponsors__txt !{val.title}
               ul.sponsors__list
                 each item in val.list
                   li.sponsors__item

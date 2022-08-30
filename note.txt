@@ -1,18 +1,56 @@
-logo 19 24 0.3em
+Timeline
 
-h1 18 32 0.15em
+Desktop
+30
+- Home []
+- Single [*]
+- Category [*]
+- Participants [*]
+- Single Participants [*]
+- Archive [*]
+- About BDD [*]
+- Strategic Partner [*]
+- Sponsors [*]
+- Search Result [*]
+- favicon [*]
 
-h2 15 27 0.15em
+31
+- Gallery []
+- Landing []
+- Auto Scroll []
+- Copy Link []
 
-h3 14 22 0.03em p
-14 24 0.15em
-14 25 0.25em
+Mobile
+1
+- Home []
+- Single []
+- Category []
 
-13 21 0.15em
-13 23 0.3em
+2
+- Participants []
+- Single Participants []
+- Archive []
 
-12 20 0.15em
+5
+- About BDD []
+- Strategic Partner []
+- Sponsors []
 
-11 19 0.15em
+6
+- Search Result []
+- Landing []
 
-10 16
+
+7
+
+
+8
+
+
+9
+
+
+12
+
+
+13

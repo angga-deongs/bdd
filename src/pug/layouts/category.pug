@@ -21,7 +21,8 @@
                   =`\n`
                   a.layout-primary__sub-category__link(href=val.to) !{val.title}
           include ../components/sort.pug
-        .layout-primary__list
+        .layout-primary__list.js-layout-primary
+          .layout-primary__sizer
           each item in data.list
             include ../components/card-primary.pug
         include ../components/pagination.pug

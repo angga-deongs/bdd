@@ -7,5 +7,6 @@ import Header from "./Header";
 import Search from "./Search";
 import Home from "./Home";
 import Sort from "./Sort";
+import Category from "./Category";
 
-export { Header, Search, Home, Sort };
+export { Header, Search, Home, Sort, Category };

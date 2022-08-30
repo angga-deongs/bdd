@@ -3,6 +3,7 @@
    ========================================================================== */
 
 .layout-primary {
+  $lp: &;
   &__content {
     display: flex;
     margin-left: -20px;
@@ -22,7 +23,7 @@
     @include scroll("y", auto, "hide");
   }
   &__head {
-    margin-bottom: 82px;
+    margin-bottom: 75px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,8 +31,13 @@
   &__main {
     display: flex;
     align-items: center;
-    padding-right: 40px;
-    overflow: hidden;
+    margin-top: -8px;
+  }
+  &__name {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: color(primary);
+    letter-spacing: 0.15em;
   }
   &__category {
     margin-bottom: 0;
@@ -42,6 +48,7 @@
     white-space: nowrap;
   }
   .fi-arrow-right {
+    display: block;
     margin-right: 24px;
     color: color(primary);
     width: 8px;
@@ -67,9 +74,28 @@
       }
     }
     &__link {
+      display: block;
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 0.15em;
+    }
+  }
+  &__list {
+    margin: -21px -20px 68px;
+  }
+  &__sizer {
+    width: 33.3333333%;
+  }
+  .card-primary {
+    width: 33.3333333%;
+    padding: 21px 20px;
+  }
+  &--category {
+    #{$lp} {
+      &__main {
+        padding-right: 40px;
+        overflow: hidden;
+      }
     }
   }
 }
