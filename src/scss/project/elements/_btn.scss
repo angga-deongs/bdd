@@ -14,7 +14,6 @@
   &--primary {
     letter-spacing: 0.03em;
     color: color(black);
-    letter-spacing: 0.03em;
     padding: 5px 14px;
     font-weight: fw(light);
     border-radius: 2px;
@@ -31,6 +30,38 @@
     font-weight: fw(light);
     .fi {
       font-size: 5px;
+    }
+  }
+  &--tertiary {
+    letter-spacing: 0.03em;
+    padding: 5px 8px;
+    border-radius: 2px;
+    min-width: 84px;
+    border: 1px solid color(black);
+    &:hover {
+      background-color: color(silver);
+    }
+  }
+  &--sort {
+    color: color(black);
+    letter-spacing: 0.03em;
+    padding: 5px 14px;
+    font-weight: fw(light);
+    border-radius: 2px;
+    min-width: 77px;
+    border: 1px solid color(black);
+    &:hover {
+      color: color(primary);
+    }
+    .fi-arrow-down {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 5px;
+      font-size: 0.6rem;
+      transition: all 0.3s ease;
+      .show-sort & {
+        transform: rotate(180deg);
+      }
     }
   }
 }

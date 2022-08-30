@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Layouts: Layout Primary
+   ========================================================================== */
+
+.layout-primary {
+  &__content {
+    display: flex;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  &__side {
+    flex: 0 0 25%;
+    border-right: 1px solid color(grey);
+  }
+  &__posts {
+    flex: 0 0 75%;
+  }
+  &__side,
+  &__posts {
+    height: 100vh;
+    padding: 76px 20px 80px;
+    @include scroll("y", auto, "hide");
+  }
+  &__head {
+    margin-bottom: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__main {
+    display: flex;
+    align-items: center;
+    padding-right: 40px;
+    overflow: hidden;
+  }
+  &__category {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: color(primary);
+    letter-spacing: 0.15em;
+    margin-right: 12px;
+    white-space: nowrap;
+  }
+  .fi-arrow-right {
+    margin-right: 24px;
+    color: color(primary);
+    width: 8px;
+    font-size: 0.8rem;
+    margin-top: -2px;
+  }
+  &__sub-category {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    @include scroll("x", auto, "hide");
+    &__item {
+      margin-right: 24px;
+      transition: all 0.3s ease;
+      color: color(grey);
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover,
+      &.active {
+        color: color(primary);
+      }
+    }
+    &__link {
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+  }
+}

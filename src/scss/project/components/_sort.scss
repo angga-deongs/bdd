@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Components Sort
+   ========================================================================== */
+
+.sort {
+  width: 77px;
+  position: relative;
+  &__btn {
+    .show-sort & {
+      border-bottom-color: transparent;
+    }
+  }
+  &__list {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(2px);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    margin-top: -8px;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    background-color: color(white);
+    padding: 5px 14px 7px;
+    border: 1px solid color(black);
+    border-top: 0;
+    border-radius: 0 0 2px 2px;
+    transition: all 0.2s ease;
+    .show-sort & {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+    }
+  }
+  &__item {
+    transition: all 0.3s ease;
+    &.active,
+    &:hover {
+      color: color(primary);
+    }
+  }
+  &__link {
+    text-decoration: none;
+    display: block;
+  }
+}
