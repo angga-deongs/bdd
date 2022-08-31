@@ -15,8 +15,8 @@ Desktop
 - favicon [*]
 
 31
+- Landing [*]
 - Gallery []
-- Landing []
 - Auto Scroll []
 - Copy Link []
 

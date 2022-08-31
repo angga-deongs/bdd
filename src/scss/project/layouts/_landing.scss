@@ -1,0 +1,76 @@
+/* ==========================================================================
+   Layouts: Landing
+   ========================================================================== */
+
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  &__img {
+    width: 100%;
+    height: 100%;
+    &__el {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      &--d {
+        @include medium {
+          display: none;
+        }
+      }
+      &--m {
+        display: none;
+        @include medium {
+          display: block;
+        }
+      }
+    }
+  }
+  &__logo {
+    width: 195px;
+    position: absolute;
+    top: 56px;
+    right: 53px;
+    z-index: zi(landing-logo);
+  }
+  &__txt {
+    width: 640px;
+    position: absolute;
+    bottom: 32px;
+    left: 54px;
+    color: color(white);
+    z-index: zi(landing-txt);
+    &__title {
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      font-weight: fw(regular);
+      font-size: 2.3rem;
+      line-height: 4rem;
+      letter-spacing: 0.16em;
+    }
+    &__desc {
+      margin-bottom: 32px;
+      font-size: 1.7rem;
+      line-height: 2.7rem;
+      letter-spacing: 0.1em;
+    }
+    &__img {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    &__year {
+      font-size: 3rem;
+      line-height: 5.4rem;
+      margin-bottom: 0;
+      font-family: ff(secondary);
+      letter-spacing: 0.2em;
+    }
+  }
+  &__arrow {
+    width: 20px;
+    position: absolute;
+    bottom: 48px;
+    right: 50px;
+    z-index: zi(landing-arrow);
+  }
+}
