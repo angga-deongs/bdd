@@ -1,0 +1,27 @@
+//-------------------------------------------------------------------------------
+  @name: Sponsors
+  -------------------------------------------------------------------------------//
+
+//sponsors
+.sponsors
+  .container
+    .sponsors__content
+      section.sponsors__side
+        include sidenav.pug
+        .sponsors__side__content
+          p !{data.desc}
+      section.sponsors__posts
+        .sponsors__head
+          h2.sponsors__title sponsors
+        .sponsors__body
+          each val in data.list
+            .sponsors__row
+              h3.sponsors__txt !{val.title}
+              ul.sponsors__list
+                each item in val.list
+                  li.sponsors__item
+                    =`\n`
+                    figure.sponsors__img
+                      =`\n`
+                      img.sponsors__img__el(src='assets/img/dummy/'+item.img, alt='sponsors')/
+///sponsors

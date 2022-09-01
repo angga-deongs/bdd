@@ -1,0 +1,167 @@
+//-------------------------------------------------------------------------------
+  @name: Header
+  -------------------------------------------------------------------------------//
+
+-
+  header = {
+    events: [
+      {
+        to: '#',
+        category: 'Main Events',
+        subcategory: [
+          {
+            to: 'category.html',
+            name: 'Open Studio'
+          },
+          {
+            to: 'category.html',
+            name: 'Exhibition'
+          },
+          {
+            to: 'category.html',
+            name: 'Open Architecture'
+          },
+          {
+            to: 'category.html',
+            name: 'Talk & Workshop'
+          }
+        ]
+      },
+      {
+        to: '#',
+        category: 'Installation',
+        subcategory: [
+          {
+            to: 'category.html',
+            name: '1 x 1 Installation'
+          },
+          {
+            to: 'category.html',
+            name: 'Chair Exhibition'
+          },
+        ]
+      },
+      {
+        to: '#',
+        category: 'Collateral Events',
+        subcategory: [
+          {
+            name: 'Collateral Events 1',
+            to: 'category.html',
+          },
+          {
+            name: 'Collateral Events 2',
+            to: 'category.html',
+          },
+          {
+            name: 'Collateral Events 3',
+            to: 'category.html',
+          },
+        ]
+      },
+      {
+        to: 'participants.html',
+        category: 'Participants',
+      }
+    ],
+    pages: [
+      {
+        to: 'about.html',
+        title: 'About BDD'
+      },
+      {
+        to: 'archive.html',
+        title: 'Archive'
+      },
+      {
+        to: 'strategic-partner.html',
+        title: 'Strategic Partners'
+      },
+      {
+        to: 'sponsors.html',
+        title: 'Sponsors'
+      },
+      {
+        to: 'press-release.html',
+        title: 'Press Release'
+      },
+    ],
+    external: [
+      {
+        to: '#',
+        title: 'Buy Ticket'
+      },
+      {
+        to: '#',
+        title: 'Download App'
+      }
+    ],
+    socmed: [
+      {
+        to: '#',
+        icon: 'fb'
+      },
+      {
+        to: '#',
+        icon: 'tw'
+      },
+      {
+        to: '#',
+        icon: 'ig'
+      },
+    ],
+    copyright: '&copy; 2020 Bintaro Design District. All rights reserved.'
+  }
+
+//header
+header.header
+  .header__content
+    .header__top
+      =`\n`
+      a.header__logo(href='#')
+        =`\n`
+        img.header__logo__el(src='assets/img/logo/bintaro-design-district-white-logo.svg', alt='bdd')/
+        =`\n`
+      =`\n`
+      button.header__close.btn.js-close-mobile-menu(type='button')
+        =`\n`
+        i.fi.fi-close
+        =`\n`
+    .header__menu.js-header-menu
+      nav.header__nav
+        ul.header__list
+          each val in header.events
+            li.header__item(class=val.subcategory ? 'has-sub-category' : '')
+              =`\n`
+              a.header__link(href=val.to)
+                | !{val.category}
+                if val.subcategory
+                  i.fi.fi-arrow-down
+                  =`\n`
+              if val.subcategory
+                ul.header__sub-category__list
+                  each item in val.subcategory
+                    li.header__sub-category__item
+                      =`\n`
+                      a.header__sub-category__link(href=item.to) !{item.name}
+        ul.header__list
+          each val in header.pages
+            li.header__item
+              =`\n`
+              a.header__link(href=val.to) !{val.title}
+        ul.header__list
+          each val in header.external
+            li.header__item
+              =`\n`
+              a.header__link(href=val.to) !{val.title}
+    .header__bottom
+      ul.header__socmed
+        each val in header.socmed
+          li.header__socmed__item
+            =`\n`
+            a.header__socmed__link(href=val.to)
+              =`\n`
+              i.fi(class='fi-'+val.icon)
+              =`\n`
+      p.header__copyright !{header.copyright}
+///header

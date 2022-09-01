@@ -1,0 +1,23 @@
+//-------------------------------------------------------------------------------
+  @name: Card Primary
+  -------------------------------------------------------------------------------//
+
+//card-primary
+.card-primary
+  .card-primary__box
+    =`\n`
+    if item.date
+      a.card-primary__link(href='single.html') !{item.title}
+    else
+      a.card-primary__link(href='single-participants.html') !{item.title}
+    =`\n`
+    figure.card-primary__img
+      =`\n`
+      img.card-primary__img__el(src='assets/img/dummy/'+item.img, alt=item.title)/
+    h3.card-primary__title !{item.title}
+    if item.date
+      h6.card-primary__date !{item.date}
+    if item.tag
+      h6.card-primary__tag !{item.tag}
+    p.card-primary__desc !{item.desc}
+///card-primary

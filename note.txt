@@ -16,30 +16,30 @@ Desktop
 
 31
 - Landing [*]
-- Auto Scroll [*]
+- Gallery [*]
 
 Mobile
 1
-- Gallery []
+- Auto Scroll []
 - Copy Link []
-- Home []
-- Single []
-- Category []
 
 2
+- Home []
+- Category []
+- Search Result []
 - Participants []
-- Single Participants []
-- Archive []
+
 
 5
+- Single []
+- Single Participants []
+- Archive []
 - About BDD []
 - Strategic Partner []
-- Sponsors []
 
 6
-- Search Result []
+- Sponsors []
 - Landing []
-
 
 7
 
@@ -54,3 +54,7 @@ Mobile
 
 
 13
+
+
+14
+- launch

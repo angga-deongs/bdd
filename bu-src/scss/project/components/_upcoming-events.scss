@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Components Upcoming Events
+   ========================================================================== */
+
+.upcoming-events {
+  .wp-block-image {
+    margin: 0 0 18px;
+    img {
+      width: 100%;
+      height: initial;
+    }
+  }
+  p {
+    letter-spacing: 0.03em;
+    margin-bottom: 27px;
+  }
+  .wp-block-button__link {
+    display: inline-block;
+    vertical-align: middle;
+    outline: 0;
+    text-decoration: none;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    letter-spacing: 0.03em;
+    padding: 5px 8px;
+    border-radius: 2px;
+    min-width: 84px;
+    border: 1px solid color(black);
+    &:hover {
+      background-color: color(silver);
+    }
+  }
+}

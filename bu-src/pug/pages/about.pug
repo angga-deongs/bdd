@@ -1,0 +1,11 @@
+extends ../templates/default.pug
+
+//- Head
+block siteHeader
+  -
+    siteTitle = 'About';
+
+//- Body
+block siteContent
+  //- About
+  include ../layouts/about.pug

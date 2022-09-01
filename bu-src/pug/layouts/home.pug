@@ -1,0 +1,35 @@
+//-------------------------------------------------------------------------------
+  @name: Home
+  -------------------------------------------------------------------------------//
+
+//home
+.home
+  .container
+    .home__content
+      //home-nav
+      section.home__side
+        include sidenav.pug
+        include ../components/upcoming-events.pug
+      each val in data.posts
+        //home-posts
+        section.home__posts
+          //home-head
+          .home__head
+            =`\n`
+            button.home__category.btn.btn--secondary.js-home-posts-category(type='button')
+              =`\n`
+              span.home__category__name !{val.title}
+              =`\n`
+              i.fi.fi-arrow-down
+              =`\n`
+              span.home__current-category !{val.current}
+            ul.home__sub-category.js-home-sub-category
+              each subcategory in val.category
+                li.home__sub-category__item !{subcategory.name}
+          //home-list
+          .home__list
+            each item in val.list
+              include ../components/card-primary.pug
+          =`\n`
+          a.home__action.btn.btn--primary(href=val.to) See All
+///home

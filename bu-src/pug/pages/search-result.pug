@@ -1,0 +1,11 @@
+extends ../templates/default.pug
+
+//- Head
+block siteHeader
+  -
+    siteTitle = 'Search Result';
+
+//- Body
+block siteContent
+  //- Search Result
+  include search-result/search-result.pug

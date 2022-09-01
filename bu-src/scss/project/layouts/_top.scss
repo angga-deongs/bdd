@@ -1,0 +1,95 @@
+/* ==========================================================================
+   Layouts: Top
+   ========================================================================== */
+
+.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: color(white);
+  z-index: zi(top);
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    border-bottom: 1px solid color(grey);
+  }
+  &__content {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__txt {
+    margin-bottom: 0;
+    letter-spacing: 0.3em;
+    color: color(primary);
+    font-family: ff(secondary);
+    span {
+      margin-left: 12px;
+      @include font-size(h3-b);
+    }
+  }
+  &__search {
+    $hs: &;
+    position: relative;
+    &__btn {
+      font-size: 0;
+      padding: 0;
+      text-align: right;
+      display: inline-block;
+      vertical-align: middle;
+      span {
+        letter-spacing: 0.15em;
+        display: inline-block;
+        vertical-align: middle;
+        transition: all 0.3s ease;
+        margin-right: 12px;
+        transition-delay: 0.1s;
+        @include font-size(h3-a);
+      }
+    }
+    &__bar {
+      opacity: 0;
+      visibility: hidden;
+      width: 218px;
+      position: absolute;
+      right: 24px;
+      border: 0;
+      outline: 0;
+      padding: 0;
+      letter-spacing: 0.15em;
+      color: color(primary);
+      transition: all 0.3s ease;
+      transform: translateX(-2px);
+      @include font-size(h3-a);
+      @include placeholder-color(color(secondary));
+    }
+    &--show {
+      #{$hs} {
+        &__btn span {
+          opacity: 0;
+          visibility: hidden;
+          transform: translateX(2px);
+          transition-delay: 0s;
+        }
+        &__bar {
+          opacity: 1;
+          visibility: visible;
+          transform: none;
+          transition-delay: 0.1s;
+        }
+      }
+    }
+    .fi-search {
+      font-size: 1.1rem;
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: -4px;
+    }
+  }
+}

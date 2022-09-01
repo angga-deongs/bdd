@@ -1,0 +1,104 @@
+/* ==========================================================================
+ Init: Fonts
+ ========================================================================== */
+
+@font-face {
+  font-family: "UniversLTStd";
+  src: url("../fonts/UniversLTStd-Light.eot");
+  src: url("../fonts/UniversLTStd-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/UniversLTStd-Light.svg#UniversLTStd-Light") format("svg"),
+    url("../fonts/UniversLTStd-Light.ttf") format("truetype"),
+    url("../fonts/UniversLTStd-Light.woff") format("woff"),
+    url("../fonts/UniversLTStd-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "UniversLTStd";
+  src: url("../fonts/UniversLTStd-LightObl.eot");
+  src: url("../fonts/UniversLTStd-LightObl.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/UniversLTStd-LightObl.svg#UniversLTStd-LightObl")
+      format("svg"),
+    url("../fonts/UniversLTStd-LightObl.ttf") format("truetype"),
+    url("../fonts/UniversLTStd-LightObl.woff") format("woff"),
+    url("../fonts/UniversLTStd-LightObl.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "UniversLTStd-Ex";
+  src: url("../fonts/UniversLTStd-Ex.eot");
+  src: url("../fonts/UniversLTStd-Ex.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/UniversLTStd-Ex.svg#UniversLTStd-Ex") format("svg"),
+    url("../fonts/UniversLTStd-Ex.ttf") format("truetype"),
+    url("../fonts/UniversLTStd-Ex.woff") format("woff"),
+    url("../fonts/UniversLTStd-Ex.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "UniversLTStd-Ex";
+  src: url("../fonts/UniversLTStd-ExObl.eot");
+  src: url("../fonts/UniversLTStd-ExObl.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/UniversLTStd-ExObl.svg#UniversLTStd-ExObl") format("svg"),
+    url("../fonts/UniversLTStd-ExObl.ttf") format("truetype"),
+    url("../fonts/UniversLTStd-ExObl.woff") format("woff"),
+    url("../fonts/UniversLTStd-ExObl.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "UniversLTStd";
+  src: url("../fonts/UniversLTStd.eot");
+  src: url("../fonts/UniversLTStd.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/UniversLTStd.svg#UniversLTStd") format("svg"),
+    url("../fonts/UniversLTStd.ttf") format("truetype"),
+    url("../fonts/UniversLTStd.woff") format("woff"),
+    url("../fonts/UniversLTStd.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "UniversLTStd";
+  src: url("../fonts/UniversLTStd-Bold.eot");
+  src: url("../fonts/UniversLTStd-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/UniversLTStd-Bold.svg#UniversLTStd-Bold") format("svg"),
+    url("../fonts/UniversLTStd-Bold.ttf") format("truetype"),
+    url("../fonts/UniversLTStd-Bold.woff") format("woff"),
+    url("../fonts/UniversLTStd-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "UniversLTStd";
+  src: url("../fonts/UniversLTStd-BoldObl.eot");
+  src: url("../fonts/UniversLTStd-BoldObl.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/UniversLTStd-BoldObl.svg#UniversLTStd-BoldObl") format("svg"),
+    url("../fonts/UniversLTStd-BoldObl.ttf") format("truetype"),
+    url("../fonts/UniversLTStd-BoldObl.woff") format("woff"),
+    url("../fonts/UniversLTStd-BoldObl.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Bintaro-Design-District";
+  src: url("../fonts/Bintaro-Design-District.eot?90y9gs");
+  src: url("../fonts/Bintaro-Design-District.eot?90y9gs#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Bintaro-Design-District.ttf?90y9gs") format("truetype"),
+    url("../fonts/Bintaro-Design-District.woff?90y9gs") format("woff"),
+    url("../fonts/Bintaro-Design-District.svg?90y9gs#Bintaro-Design-District")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

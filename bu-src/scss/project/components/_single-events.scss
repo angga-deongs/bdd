@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Components Single Events
+   ========================================================================== */
+
+.single-events {
+  &__img {
+    margin: 0 0 18px;
+    &__el {
+      width: 100%;
+    }
+  }
+  &__date,
+  &__time {
+    @include font-size(h3-a);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 0;
+  }
+  &__share {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 14px;
+    margin-bottom: 20px;
+    display: flex;
+    &__item {
+      margin-right: 6px;
+      transition: all 0.3s ease;
+      &:hover {
+        transform: translateY(-2px);
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &__link {
+      text-decoration: none;
+    }
+    .fi {
+      font-size: 2.5rem;
+    }
+  }
+  &__action {
+    margin-bottom: 24px;
+  }
+  &__apps {
+    display: flex;
+    &__img {
+      margin: 0 14px 0 0;
+      max-width: 92px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

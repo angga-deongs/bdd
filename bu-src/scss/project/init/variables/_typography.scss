@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Variable: Typography
+   ========================================================================== */
+
+$font-primary: "UniversLTStd";
+$font-secondary: "UniversLTStd-Ex";
+
+// Font
+$font: (
+  family-primary: $font-primary,
+  family-secondary: $font-secondary,
+  logo: (
+    font-size: 1.9rem,
+    line-height: 2.4rem,
+    letter-spacing: 0.3em,
+  ),
+  h1: (
+    font-size: 1.8rem,
+    line-height: 3.2rem,
+  ),
+  h2: (
+    font-size: 1.5rem,
+    line-height: 2.7rem,
+  ),
+  h3: (
+    font-size: 1.4rem,
+    line-height: 2.2rem,
+  ),
+  h3-a: (
+    font-size: 1.4rem,
+    line-height: 2.4rem,
+  ),
+  h3-b: (
+    font-size: 1.4rem,
+    line-height: 2.5rem,
+  ),
+  h4: (
+    font-size: 1.3rem,
+    line-height: 2.1rem,
+  ),
+  h4-a: (
+    font-size: 1.3rem,
+    line-height: 2.3rem,
+  ),
+  h5: (
+    font-size: 1.2rem,
+    line-height: 2rem,
+  ),
+  h6: (
+    font-size: 1.1rem,
+    line-height: 1.9rem,
+  ),
+  body: (
+    font-size: 1.4rem,
+    line-height: 2.2rem,
+  ),
+  small: (
+    font-size: 1rem,
+    line-height: 1.6rem,
+  ),
+  weight: (
+    light: 300,
+    regular: 400,
+    bold: 700,
+  ),
+);

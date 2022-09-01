@@ -1,0 +1,22 @@
+//-------------------------------------------------------------------------------
+  @name: Participants
+  -------------------------------------------------------------------------------//
+
+//participants
+.layout-primary.layout-primary--participants
+  .container
+    .layout-primary__content
+      section.layout-primary__side
+        include sidenav.pug
+        include ../components/upcoming-events.pug
+      section.layout-primary__posts
+        .layout-primary__head
+          .layout-primary__main
+            h2.layout-primary__name !{data.category}
+          include ../components/sort.pug
+        .layout-primary__list.js-layout-primary
+          .layout-primary__sizer
+          each item in data.list
+            include ../components/card-primary.pug
+        include ../components/pagination.pug
+///participants

@@ -1,0 +1,111 @@
+/* ==========================================================================
+   Layouts: Home
+   ========================================================================== */
+
+.home {
+  &__content {
+    display: flex;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  &__side,
+  &__posts {
+    height: 100vh;
+    flex: 0 0 25%;
+    border-right: 1px solid color(grey);
+    padding: 76px 20px 80px;
+    @include scroll("y", auto, "hide");
+    &:last-child {
+      border-right: 0;
+    }
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 82px;
+  }
+  &__category {
+    display: flex;
+    align-items: center;
+    @include ellipsis;
+    &__name {
+      margin-right: 12px;
+      @include font-size(h2);
+    }
+    .fi-arrow-right {
+      width: 8px;
+      font-size: 0.8rem;
+      margin-top: -2px;
+    }
+    .fi-arrow-down {
+      width: 8px;
+      transition: all 0.3s ease;
+      &::before {
+        display: block;
+      }
+      .show-dropdown & {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  &__sub-category {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 28px;
+    left: 0;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    background-color: color(white);
+    padding-right: 4px;
+    padding-bottom: 2px;
+    transition: all 0.25s ease;
+    transform: translateY(2px);
+    .show-dropdown & {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+    }
+    &__item {
+      padding-top: 2px;
+      padding-bottom: 2px;
+      cursor: pointer;
+      text-transform: uppercase;
+      @include font-size(h4);
+      line-height: 1;
+      letter-spacing: 0.15em;
+      margin-bottom: 3px;
+      transition: all 0.3s ease;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:hover,
+      &.active {
+        color: color(primary);
+      }
+    }
+  }
+  &__current-category {
+    text-transform: uppercase;
+    color: color(primary);
+    margin-left: 10px;
+    letter-spacing: 0.15em;
+    @include font-size(h4);
+    @include ellipsis;
+  }
+  &__list {
+    margin-bottom: 68px;
+  }
+  &__action {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .card-primary {
+    margin-bottom: 42px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
