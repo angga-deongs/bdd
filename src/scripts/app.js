@@ -11,6 +11,7 @@ import {
   Landing,
   Single,
   About,
+  StrategicPartner,
 } from "components";
 
 // --- App
@@ -47,6 +48,7 @@ const App = (() => {
       Landing.init();
       Single.init();
       About.init();
+      StrategicPartner.init();
     })(jQuery);
   };
 

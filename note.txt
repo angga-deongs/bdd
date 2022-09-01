@@ -21,7 +21,7 @@ Desktop
 
 Mobile
 1
-- Auto Scroll []
+- Auto Scroll [*]
 
 2
 - Home []

@@ -11,5 +11,16 @@ import Category from "./Category";
 import Landing from "./Landing";
 import Single from "./Single";
 import About from "./About";
+import StrategicPartner from "./StrategicPartner";
 
-export { Header, Search, Home, Sort, Category, Landing, Single, About };
+export {
+  Header,
+  Search,
+  Home,
+  Sort,
+  Category,
+  Landing,
+  Single,
+  About,
+  StrategicPartner,
+};

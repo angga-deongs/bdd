@@ -51,12 +51,15 @@
   }
   &__apps {
     display: flex;
-    &__img {
-      margin: 0 14px 0 0;
-      max-width: 92px;
+    &__link {
+      margin-right: 14px;
       &:last-child {
         margin-right: 0;
       }
+    }
+    &__img {
+      margin: 0;
+      max-width: 92px;
     }
   }
   .tooltip {
