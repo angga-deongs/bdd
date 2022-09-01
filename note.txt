@@ -16,12 +16,12 @@ Desktop
 
 31
 - Landing [*]
-- Gallery []
-- Auto Scroll []
-- Copy Link []
+- Auto Scroll [*]
 
 Mobile
 1
+- Gallery []
+- Copy Link []
 - Home []
 - Single []
 - Category []

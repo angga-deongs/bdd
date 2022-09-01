@@ -42,7 +42,9 @@ const App = (() => {
   // --- load
   const load = () => {
     (($) => {
-      $(window).on("load", () => {});
+      $(window).on("load", () => {
+        $.scrollify.instantNext();
+      });
     })(jQuery);
   };
 
