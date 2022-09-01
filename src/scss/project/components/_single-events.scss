@@ -30,6 +30,13 @@
       }
       &:last-child {
         margin-right: 0;
+        position: relative;
+      }
+      &.show-tooltip {
+        .tooltip {
+          opacity: 1;
+          visibility: visible;
+        }
       }
     }
     &__link {
@@ -49,6 +56,33 @@
       max-width: 92px;
       &:last-child {
         margin-right: 0;
+      }
+    }
+  }
+  .tooltip {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: -2px;
+    left: 44px;
+    transition: all 0.3s ease;
+    &__text {
+      padding: 4px 12px;
+      color: color(white);
+      background-color: color(primary);
+      display: inline-block;
+      vertical-align: middle;
+      border-radius: 2px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent color(primary) transparent transparent;
       }
     }
   }

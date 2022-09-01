@@ -17,11 +17,11 @@ Desktop
 31
 - Landing [*]
 - Gallery [*]
+- Copy Link [*]
 
 Mobile
 1
 - Auto Scroll []
-- Copy Link []
 
 2
 - Home []

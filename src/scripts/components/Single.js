@@ -43,10 +43,33 @@ const Single = (() => {
     $(".wp-block-image img").wrap("<div class='wp-block-image-box'></div>");
   };
 
+  // - handleClickCopy
+  const handleClickCopy = () => {
+    $(".js-copy-link").on("click", (e) => {
+      const _this = $(e.currentTarget);
+      const _temp = $('<input type="text"/>');
+      _this.parents(".single-events__share__item").addClass("show-tooltip");
+      setTimeout(() => {
+        _this
+          .parents(".single-events__share__item")
+          .removeClass("show-tooltip");
+      }, 2000);
+
+      $(".single-events__share__item:last").append(_temp);
+      _temp.val(_this.attr("data-link")).select();
+      document.execCommand("copy");
+      _temp.remove();
+      e.preventDefault();
+    });
+  };
+
   // - init
   const init = () => {
-    handleRunCarousel();
-    handleGallery();
+    handleClickCopy();
+    if ($(".wp-block-gallery")) {
+      handleRunCarousel();
+      handleGallery();
+    }
   };
 
   return {
