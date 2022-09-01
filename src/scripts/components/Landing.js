@@ -13,9 +13,6 @@ const Landing = (() => {
       updateHash: false,
       scrollbars: false,
       standardScrollElements: ".header, .overlay, section",
-      after: () => {
-        $(".landing").addClass("show");
-      },
     });
   };
 

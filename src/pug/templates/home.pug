@@ -126,7 +126,7 @@ html(lang='en')
     link(rel='stylesheet', href=cssMain)/
     ='\n\n'
 
-  body(class=holdTransitionClass, class=className)
+  body(class=holdTransitionClass, class='homepage')
 
     ='\n\n'
 
@@ -135,16 +135,35 @@ html(lang='en')
 
     ='\n\n'
 
-    //main-site
-    main.main-site.main-site--hide.js-main-site.snap-section
-      //- top
-      include ../layouts/top.pug
+    //snap
+    .snap
 
       ='\n\n'
 
-      //- site-content
-      block siteContent
-    ///main-site
+      include ../layouts/landing.pug
+
+      ='\n\n'
+
+      //main-site
+      main.main-site.main-site--hide.js-main-site.snap-section(data-section-name='main')
+
+        ='\n\n'
+
+        //- top
+        include ../layouts/top.pug
+
+        ='\n\n'
+
+        //- site-content
+        block siteContent
+
+        ='\n\n'
+
+      ///main-site
+
+      ='\n\n'
+
+    ///snap
 
     ='\n\n'
 

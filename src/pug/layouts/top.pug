@@ -6,8 +6,14 @@
 top.top
   .container
     .top__content
-      h1.top__txt BINTARO DESIGN DISTRICT
-        span 2020
+      if homepage
+        h1.top__txt.js-sidenav-logo BINTARO DESIGN DISTRICT
+          span 2020
+      else
+        h1.top__txt
+          a(href='/')
+            | BINTARO DESIGN DISTRICT
+            span 2020
       =`\n`
       form.top__search.js-top-search
         =`\n`

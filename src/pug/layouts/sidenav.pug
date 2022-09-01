@@ -5,11 +5,18 @@
 //sidenav
 .sidenav
   .sidenav__head
-    =`\n`
-    button.sidenav__logo.btn.js-sidenav-logo(type='button')
+    if homepage
       =`\n`
-      img.sidenav__logo__el(src='assets/img/logo/bintaro-design-district.svg', alt='bdd')/
+      button.sidenav__logo.btn.js-sidenav-logo(type='button')
+        =`\n`
+        img.sidenav__logo__el(src='assets/img/logo/bintaro-design-district.svg', alt='bdd')/
+        =`\n`
+    else
       =`\n`
+      a.sidenav__logo.btn.js-sidenav-logo(href='/')
+        =`\n`
+        img.sidenav__logo__el(src='assets/img/logo/bintaro-design-district.svg', alt='bdd')/
+        =`\n`
     =`\n`
     button.burger-menu.js-burger-menu
       =`\n`
