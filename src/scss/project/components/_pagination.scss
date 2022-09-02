@@ -19,6 +19,7 @@
   a {
     text-decoration: none;
     transition: all 0.3s ease;
+    letter-spacing: 0.03em;
     &:hover {
       color: color(primary);
     }

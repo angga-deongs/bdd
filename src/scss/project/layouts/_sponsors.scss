@@ -26,6 +26,7 @@
   }
   &__head {
     margin-bottom: 82px;
+    transform: translateY(-3px);
   }
   &__title {
     text-transform: uppercase;
@@ -64,7 +65,7 @@
       height: 100%;
       object-fit: contain;
       filter: grayscale(100%);
-      transition: all 0.3 ease;
+      transition: all 0.3s ease;
       &:hover {
         filter: grayscale(0);
       }

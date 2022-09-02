@@ -12,7 +12,8 @@
       section.layout-primary__posts
         .layout-primary__head
           .layout-primary__main
-            h2.layout-primary__category !{data.category}
+            =`\n`
+            a.layout-primary__category(href="category.html") !{data.category}
             =`\n`
             i.fi.fi-arrow-right
             ul.layout-primary__sub-category

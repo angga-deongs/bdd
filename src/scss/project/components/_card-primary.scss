@@ -3,8 +3,16 @@
    ========================================================================== */
 
 .card-primary {
+  $cp: &;
   &__box {
     position: relative;
+    &:hover {
+      #{$cp} {
+        &__title {
+          color: color(primary);
+        }
+      }
+    }
   }
   &__img {
     margin: 0 0 17px;
@@ -16,6 +24,7 @@
     text-transform: uppercase;
     letter-spacing: 0.15em;
     margin-bottom: 8px;
+    transition: all 0.3s ease;
   }
   &__date {
     color: color(grey);

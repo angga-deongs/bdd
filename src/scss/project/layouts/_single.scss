@@ -31,6 +31,7 @@
       text-transform: uppercase;
       letter-spacing: 0.15em;
       margin-bottom: 82px;
+      transform: translateY(-3px);
     }
     &__list {
       margin-bottom: 68px;
@@ -38,6 +39,7 @@
   }
   &__head {
     margin-bottom: 82px;
+    transform: translateY(-3px);
   }
   &__category {
     text-transform: uppercase;
@@ -56,7 +58,7 @@
     letter-spacing: 0.15em;
     text-transform: uppercase;
     @include font-size(h1);
-    margin-bottom: 9px;
+    margin-bottom: 20px;
   }
   &__info {
     display: flex;

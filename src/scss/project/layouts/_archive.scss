@@ -59,6 +59,7 @@
       text-transform: uppercase;
       letter-spacing: 0.15em;
       margin-bottom: 82px;
+      transform: translateY(-3px);
     }
     &__content {
       h1,
@@ -85,6 +86,7 @@
   }
   &__head {
     margin-bottom: 82px;
+    transform: translateY(-3px);
   }
   &__title {
     text-transform: uppercase;
