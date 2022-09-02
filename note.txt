@@ -24,20 +24,21 @@ Mobile
 - Auto Scroll [*]
 
 2
+- feedback
+
+
+5
 - Home []
 - Category []
 - Search Result []
 - Participants []
 
-
-5
+6
 - Single []
 - Single Participants []
 - Archive []
 - About BDD []
 - Strategic Partner []
-
-6
 - Sponsors []
 - Landing []
 
