@@ -7,5 +7,10 @@ block siteHeader
 
 //- Body
 block siteContent
+  -
+    data = {
+      modifier: 'about',
+      title: 'About BDD'
+    }
   //- About
-  include ../layouts/about.pug
+  include ../layouts/default.pug

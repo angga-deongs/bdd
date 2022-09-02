@@ -10,17 +10,6 @@ import Sort from "./Sort";
 import Category from "./Category";
 import Landing from "./Landing";
 import Single from "./Single";
-import About from "./About";
-import StrategicPartner from "./StrategicPartner";
+import Default from "./Default";
 
-export {
-  Header,
-  Search,
-  Home,
-  Sort,
-  Category,
-  Landing,
-  Single,
-  About,
-  StrategicPartner,
-};
+export { Header, Search, Home, Sort, Category, Landing, Single, Default };

@@ -1,0 +1,70 @@
+//-------------------------------------------------------------------------------
+  @name: Default
+  -------------------------------------------------------------------------------//
+
+//default
+.default(class=(data.modifier ? 'default--' + data.modifier : ''))
+  .container
+    .default__content
+      section.default__side
+        include sidenav.pug
+        ul.default__side__list.js-default-side-list
+      section.default__posts
+        .default__head
+          h2.default__title !{data.title}
+        .default__body
+
+          //- about
+          if data.modifier === 'about'
+            figure.default__img
+              =`\n`
+              img.default__img__el(src='assets/img/dummy/about-bdd.jpg', alt='about bdd')/
+            h2.default__body__title bintaro design district exists to stimulate, enable and award creative excellence in design and advertising
+
+          //- strategic-partner
+          if data.modifier === 'strategic-partner'
+            figure.default__img
+              =`\n`
+              img.default__img__el(src='assets/img/dummy/sponsor-1.png', alt='strtgc prtnr bdd')/
+
+          .default__txt
+
+            //- about
+            if data.modifier === 'about'
+              h3 The Backstory
+              p In 1962 a group of designers and art directors come together to celebrate creative communication and raise standards within their industry.
+              p Amongst the group are David Bailey, Terence Donovan and Alan Fletcher. Calling themselves British Design & Art Direction, the following year they organise their first Awards event. And they are picky. From 2,500 entries they select just 16 pieces of work to receive the soon-to-be coveted D&AD Yellow Pencil; the first of its kind.
+              p Today, British Design & Art Direction has grown mightily, but slimmed down its name. Now D&AD, its members represent the creative, design and advertising communities, not just in Britain, but worldwide.
+              br
+              h3 What is BDD?
+              p Since 1962, D&AD has been inspiring a community of creative thinkers by celebrating and stimulating the finest in design and advertising. The D&AD Awards are recognised globally as the ultimate creative accolade, entered and attended by the best from around the world.
+              p But it's much more than just awards. Members join a vibrant global community, whilst creatives and clients are inspired by a world-class Training programme.
+              p As a non-profit advertising and design association, all D&AD's surpluses go straight into programmes such as New Blood, inspiring the next generation of creative talent and stimulating the creative industry to work towards a fairer more sustainable future.
+              p D&AD is a Member-run organisation, led by an elected Board of Trustees. Each year D&AD appoints a President from the Board of Trustees to lead the charge and shape the conversations for the year ahead. The job of the president is to galvanise the creative communities and bring them together to inspire and celebrate the finest in design and advertising.
+              p The D&AD Board of Trustees represent the full breadth of the advertising, design and digital industries. As a member-run organisation, the elected board are responsible for the overall direction of D&AD, its programmes and where its money is spent.
+              p Bintaro Design District will take place 7-18 June 2023.
+              p Stay up to date with what we’re up to:
+                a(href="https://google.com")  Facebook,</a>
+                a(href="https://google.com") Twitter, </a>
+                a(href="https://google.com") Instagram </a>
+                | and
+                a(href="https://google.com")  YouTube</a>
+                | .
+
+            //- strategic-partner
+            if data.modifier === 'strategic-partner'
+              h3 About Jaya Property
+              p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure
+              p On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.
+              .wp-block-image
+                img(src='assets/img/dummy/strategic-partner-1.jpg', alt='strtgc prtnr bdd')/
+              h3 Collaboration with BDD
+              p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure
+              p On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.
+              h3 Gallery
+              include ../components/gallery.pug
+
+      section.default__related
+        h2.default__related__title Upcoming Events
+        include ../components/upcoming-events.pug
+///default

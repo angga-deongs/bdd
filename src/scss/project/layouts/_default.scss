@@ -1,8 +1,9 @@
 /* ==========================================================================
-   Layouts: About
+   Layouts: Default
    ========================================================================== */
 
-.about {
+.default {
+  $d: &;
   &__content {
     display: flex;
     margin-left: -20px;
@@ -83,5 +84,12 @@
   }
   &__txt {
     @include the-content;
+  }
+  &--strategic-partner {
+    #{$d} {
+      &__img__el {
+        width: initial;
+      }
+    }
   }
 }

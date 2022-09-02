@@ -10,8 +10,7 @@ import {
   Category,
   Landing,
   Single,
-  About,
-  StrategicPartner,
+  Default,
 } from "components";
 
 // --- App
@@ -47,19 +46,14 @@ const App = (() => {
       Category.init();
       Landing.init();
       Single.init();
-      About.init();
-      StrategicPartner.init();
+      Default.init();
     })(jQuery);
   };
 
   // --- load
   const load = () => {
     (($) => {
-      $(window).on("load", () => {
-        if (!$(".home").length) {
-          $.scrollify.instantNext();
-        }
-      });
+      $(window).on("load", () => {});
     })(jQuery);
   };
 
