@@ -47,6 +47,13 @@ const Home = (() => {
       const _txt = _this.text();
       const _parents = _this.parents(".home__head");
       _parents.find(".home__current-category").text(_txt);
+
+      if (!_parents.find(".fi").hasClass("fi-arrow-right")) {
+        _parents
+          .find(".fi")
+          .addClass("fi-arrow-right")
+          .removeClass("fi-arrow-down");
+      }
       e.stopPropagation();
     });
   };
