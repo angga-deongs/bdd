@@ -1,0 +1,16 @@
+extends ../templates/default.pug
+
+//- Head
+block siteHeader
+  -
+    siteTitle = '404 Page Not Found';
+
+//- Body
+block siteContent
+  -
+    data = {
+      modifier: 'not-found',
+      title: '404 Page Not Found'
+    }
+  //- About
+  include ../layouts/default.pug
