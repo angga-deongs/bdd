@@ -8,15 +8,17 @@
     .sponsors__content
       section.sponsors__side
         include sidenav.pug
-        .sponsors__side__content
+        .sponsors__txt
           p !{data.desc}
       section.sponsors__posts
         .sponsors__head
           h2.sponsors__title sponsors
+          .sponsors__txt
+            p !{data.desc}
         .sponsors__body
           each val in data.list
             .sponsors__row
-              h3.sponsors__txt !{val.title}
+              h3.sponsors__subtitle !{val.title}
               ul.sponsors__list
                 each item in val.list
                   li.sponsors__item

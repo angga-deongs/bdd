@@ -6,21 +6,39 @@
   $lp: &;
   &__content {
     display: flex;
+    flex-wrap: wrap;
     margin-left: -20px;
     margin-right: -20px;
+    @include large {
+      margin-left: -16px;
+      margin-right: -16px;
+    }
   }
   &__side {
     flex: 0 0 25%;
     border-right: 1px solid color(grey);
+    @include medium {
+      flex: 0 0 100%;
+    }
   }
   &__posts {
     flex: 0 0 75%;
+    @include medium {
+      flex: 0 0 100%;
+    }
   }
   &__side,
   &__posts {
     height: 100vh;
     padding: 76px 20px 80px;
     @include scroll("y", auto, "hide");
+    @include large {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    @include medium {
+      height: initial;
+    }
   }
   &__head {
     margin-bottom: 75px;
@@ -28,17 +46,29 @@
     align-items: center;
     justify-content: space-between;
     transform: translateY(-3px);
+    @include large {
+      margin-bottom: 70px;
+    }
+    @include medium {
+      flex-wrap: wrap;
+    }
   }
   &__main {
     display: flex;
     align-items: center;
     margin-top: -8px;
+    @include medium {
+      flex: 0 0 100%;
+    }
   }
   &__name {
     margin-bottom: 0;
     text-transform: uppercase;
     color: color(primary);
     letter-spacing: 0.15em;
+    @include large {
+      @include font-size(h3);
+    }
   }
   &__category {
     margin-bottom: 0;
@@ -67,6 +97,9 @@
       margin-right: 24px;
       transition: all 0.3s ease;
       color: color(grey);
+      @include large {
+        margin-right: 20px;
+      }
       &:last-child {
         margin-right: 0;
       }
@@ -80,23 +113,62 @@
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 0.15em;
+      @include large {
+        @include font-size(h4);
+      }
     }
   }
   &__list {
     margin: -21px -20px 68px;
+    @include large {
+      margin-left: -16px;
+      margin-right: -16px;
+    }
   }
   &__sizer {
     width: 33.3333333%;
+    @include medium {
+      width: 50%;
+    }
+    @include small {
+      width: 100%;
+    }
   }
   .card-primary {
     width: 33.3333333%;
     padding: 21px 20px;
+    @include large {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    @include medium {
+      width: 50%;
+    }
+    @include small {
+      width: 100%;
+    }
   }
+  .sort {
+    @include medium {
+      flex: 0 0 100%;
+    }
+  }
+  /* category ----------------------------------------------------------------- */
   &--category {
     #{$lp} {
       &__main {
         padding-right: 40px;
         overflow: hidden;
+      }
+    }
+  }
+  /* search-result ------------------------------------------------------------ */
+  &--search-result {
+    #{$lp} {
+      &__side {
+        @include medium {
+          display: none;
+        }
       }
     }
   }

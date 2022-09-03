@@ -7,6 +7,10 @@
     display: flex;
     margin-left: -20px;
     margin-right: -20px;
+    @include large {
+      margin-left: -16px;
+      margin-right: -16px;
+    }
   }
   &__side,
   &__posts,
@@ -15,6 +19,10 @@
     border-right: 1px solid color(grey);
     padding: 76px 20px 80px;
     @include scroll("y", auto, "hide");
+    @include large {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
     &:last-child {
       border-right: 0;
     }
@@ -60,6 +68,9 @@
       letter-spacing: 0.15em;
       margin-bottom: 82px;
       transform: translateY(-3px);
+      @include large {
+        @include font-size(h3);
+      }
     }
     &__content {
       h1,
@@ -93,6 +104,9 @@
     color: color(primary);
     letter-spacing: 0.15em;
     margin-bottom: 0;
+    @include large {
+      @include font-size(h3);
+    }
   }
   &__body {
     @include the-content;

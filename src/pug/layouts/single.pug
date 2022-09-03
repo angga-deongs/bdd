@@ -9,6 +9,7 @@
       section.single__side
         include sidenav.pug
 
+        //desktop
         //- posts events
         if data.modifier === 'posts'
           include ../components/single-events.pug
@@ -16,6 +17,7 @@
         //- post participants
         if data.modifier === 'participants'
           include ../components/address.pug
+        ///desktop
 
       section.single__posts
         .single__head
@@ -42,6 +44,17 @@
 
             h3 Gallery
             include ../components/gallery.pug
+
+        //mobile
+        //- posts events
+        if data.modifier === 'posts'
+          include ../components/single-events.pug
+
+        //- post participants
+        if data.modifier === 'participants'
+          include ../components/address.pug
+        ///mobile
+
       section.single__related
         h2.single__related__title !{data.side.title}
         .single__related__list

@@ -6,8 +6,13 @@
   $d: &;
   &__content {
     display: flex;
+    flex-wrap: wrap;
     margin-left: -20px;
     margin-right: -20px;
+    @include large {
+      margin-left: -16px;
+      margin-right: -16px;
+    }
   }
   &__side,
   &__posts,
@@ -16,12 +21,22 @@
     border-right: 1px solid color(grey);
     padding: 76px 20px 80px;
     @include scroll("y", auto, "hide");
+    @include large {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    @include medium {
+      height: initial;
+    }
     &:last-child {
       border-right: 0;
     }
   }
   &__side {
     flex: 0 0 25%;
+    @include medium {
+      flex: 0 0 100%;
+    }
     &__list {
       list-style: none;
       padding-left: 0;
@@ -49,14 +64,23 @@
   }
   &__posts {
     flex: 0 0 50%;
+    @include medium {
+      flex: 0 0 100%;
+    }
   }
   &__related {
     flex: 0 0 25%;
+    @include medium {
+      flex: 0 0 100%;
+    }
     &__title {
       text-transform: uppercase;
       letter-spacing: 0.15em;
       margin-bottom: 82px;
       transform: translateY(-3px);
+      @include large {
+        @include font-size(h3);
+      }
     }
   }
   &__img {
@@ -74,6 +98,9 @@
     color: color(primary);
     letter-spacing: 0.15em;
     margin-bottom: 0;
+    @include large {
+      @include font-size(h3);
+    }
   }
   &__body__title {
     text-transform: uppercase;

@@ -4,6 +4,9 @@
 
 .sidenav {
   margin-bottom: 57px;
+  @include large {
+    margin-bottom: 52px;
+  }
   &__head {
     display: flex;
     justify-content: space-between;
