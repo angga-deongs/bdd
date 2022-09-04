@@ -95,6 +95,14 @@
     @include large {
       top: 24px;
     }
+    @include medium {
+      opacity: 1;
+      visibility: visible;
+      position: relative;
+      top: initial;
+      left: initial;
+      display: flex;
+    }
     .show-dropdown & {
       opacity: 1;
       visibility: visible;
@@ -134,9 +142,16 @@
     @include large {
       margin-left: 8px;
     }
+    @include medium {
+      display: none;
+    }
   }
   &__list {
     margin-bottom: 68px;
+    @include medium {
+      display: flex;
+      @include scroll("x", "touch", "hide");
+    }
   }
   &__action {
     display: inline-block;

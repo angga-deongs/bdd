@@ -42,13 +42,15 @@ const Home = (() => {
 
   // - handleClickSubCategory
   const handleClickSubCategory = () => {
-    $(".js-home-sub-category li").on("click", (e) => {
-      const _this = $(e.currentTarget);
-      const _txt = _this.text();
-      const _parents = _this.parents(".home__head");
-      _parents.find(".home__current-category").text(_txt);
-      e.stopPropagation();
-    });
+    if ($(window).width() >= 992) {
+      $(".js-home-sub-category li").on("click", (e) => {
+        const _this = $(e.currentTarget);
+        const _txt = _this.text();
+        const _parents = _this.parents(".home__head");
+        _parents.find(".home__current-category").text(_txt);
+        e.stopPropagation();
+      });
+    }
   };
 
   // - init

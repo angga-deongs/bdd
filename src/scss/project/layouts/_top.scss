@@ -42,6 +42,9 @@
   &__search {
     $hs: &;
     position: relative;
+    @include medium {
+      display: none;
+    }
     &__btn {
       font-size: 0;
       padding: 0;

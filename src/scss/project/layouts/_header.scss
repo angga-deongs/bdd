@@ -57,6 +57,7 @@
   &__menu {
     text-transform: uppercase;
     padding-bottom: 130px;
+    position: relative;
   }
   &__item {
     margin-bottom: 10px;
@@ -156,6 +157,17 @@
     margin-bottom: 0;
     letter-spacing: 0.15em;
     @include font-size(h3-b);
+  }
+  &__search {
+    display: none;
+    @include medium {
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
 }
 

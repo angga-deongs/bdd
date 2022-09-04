@@ -154,6 +154,21 @@ header.header
             li.header__item
               =`\n`
               a.header__link(href=val.to) !{val.title}
+        =`\n`
+        button.header__search-btn.btn.js-header-search-btn(type='button')
+          =`\n`
+          i.fi.fi-search
+          =`\n`
+          span Search
+      .header__search
+        =`\n`
+        form.header__search__form
+          =`\n`
+          input.header__search__input(type="search", name='s', placeholder='ENTER A SEARCH TERM')/
+          =`\n`
+          button.header__search__btn(type="submit")
+            =`\n`
+            i.fi.fi-search
     .header__bottom
       ul.header__socmed
         each val in header.socmed
