@@ -19,6 +19,11 @@
     border-radius: 2px;
     min-width: 77px;
     border: 1px solid color(black);
+    @include small {
+      min-width: 70px;
+      padding-left: 11px;
+      padding-right: 11px;
+    }
     &:hover {
       background-color: color(silver);
     }

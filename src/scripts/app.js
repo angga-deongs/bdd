@@ -3,6 +3,8 @@ import { Scrollable, BrowserCheck } from "utilities";
 
 // --- components
 import {
+  WindowResize,
+  WindowScroll,
   Header,
   Search,
   Home,
@@ -39,6 +41,8 @@ const App = (() => {
       BrowserCheck.init();
 
       // --- Project
+      WindowResize.init();
+      WindowScroll.init();
       Header.init();
       Search.init();
       Home.init();

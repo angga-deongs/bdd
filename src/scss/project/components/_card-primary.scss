@@ -16,8 +16,17 @@
   }
   &__img {
     margin: 0 0 17px;
+    @include medium {
+      height: 192px;
+    }
     &__el {
       width: 100%;
+      @include medium {
+        width: initial;
+        object-fit: contain;
+        object-position: left top;
+        height: 100%;
+      }
     }
   }
   &__title {
@@ -25,21 +34,34 @@
     letter-spacing: 0.15em;
     margin-bottom: 8px;
     transition: all 0.3s ease;
+    @include small {
+      @include font-size(h4);
+    }
   }
   &__date {
     color: color(grey);
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     letter-spacing: 0.15em;
+    @include small {
+      @include font-size(small);
+    }
   }
   &__tag {
     color: color(primary);
     letter-spacing: 0.15em;
     text-transform: uppercase;
     margin-bottom: 8px;
+    @include small {
+      @include font-size(small);
+    }
   }
   &__desc {
     margin-bottom: 0;
     letter-spacing: 0.03em;
+    @include multiline-ellipsis(6);
+    @include small {
+      @include font-size(h4);
+    }
   }
   &__link {
     position: absolute;

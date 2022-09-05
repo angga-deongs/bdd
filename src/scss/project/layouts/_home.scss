@@ -5,7 +5,14 @@
 .home {
   @include medium {
     height: 100vh;
+    padding-top: 80px;
     @include scroll("y", auto, "hide");
+  }
+  .container {
+    @include medium {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
   &__content {
     display: flex;
@@ -34,12 +41,63 @@
     }
     @include medium {
       flex: 0 0 100%;
-      padding-left: 0;
-      padding-right: 0;
+      padding: 0;
       height: initial;
+      border-right: none;
+      overflow: initial;
     }
     &:last-child {
       border-right: 0;
+    }
+  }
+  &__side {
+    @include medium {
+      position: relative;
+      padding: 0 32px 64px;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        right: 20px;
+        border-bottom: 1px solid color(grey);
+      }
+    }
+    @include small {
+      padding-left: 20px;
+      padding-right: 20px;
+      &::after {
+        left: 10px;
+        right: 10px;
+      }
+    }
+  }
+  &__posts {
+    @include medium {
+      padding-top: 38px;
+      padding-bottom: 50px;
+      display: block;
+      width: 100%;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        right: 20px;
+        border-bottom: 1px solid color(grey);
+      }
+    }
+    @include small {
+      &::after {
+        left: 10px;
+        right: 10px;
+      }
+    }
+    &:last-child {
+      &::after {
+        border-bottom: none;
+      }
     }
   }
   &__head {
@@ -48,11 +106,26 @@
     position: relative;
     margin-bottom: 82px;
     transform: translateY(-3px);
+    @include medium {
+      transform: none;
+      margin-bottom: 32px;
+      padding: 2px 32px 0;
+      @include scroll("x", touch, "hide");
+    }
+    @include small {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
   &__category {
     display: flex;
     align-items: center;
     @include ellipsis;
+    @include medium {
+      overflow: initial;
+      text-overflow: initial;
+      padding-right: 10px;
+    }
     &__name {
       margin-right: 12px;
       @include font-size(h2);
@@ -60,16 +133,28 @@
         @include font-size(h3);
         margin-right: 8px;
       }
+      @include medium {
+        @include font-size(h4);
+        line-height: 1;
+      }
     }
     .fi-arrow-right {
-      width: 8px;
-      font-size: 0.8rem;
-      margin-top: -2px;
+      display: none;
+      @include medium {
+        display: inline-block;
+        vertical-align: middle;
+        width: 8px;
+        font-size: 0.8rem;
+        margin-top: -2px;
+      }
     }
     .fi-arrow-down {
       width: 8px;
       transition: all 0.3s ease;
       transform: translateY(-2px);
+      @include medium {
+        display: none;
+      }
       &::before {
         display: block;
       }
@@ -96,6 +181,10 @@
       top: 24px;
     }
     @include medium {
+      align-items: center;
+      padding-right: 0;
+      padding-bottom: 0;
+      transform: none;
       opacity: 1;
       visibility: visible;
       position: relative;
@@ -120,6 +209,16 @@
       transition: all 0.3s ease;
       @include large {
         margin-bottom: 2px;
+      }
+      @include medium {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        margin-right: 12px;
+        white-space: nowrap;
+        &:last-child {
+          margin-right: 0;
+        }
       }
       &:last-child {
         margin-bottom: 0;
@@ -149,18 +248,69 @@
   &__list {
     margin-bottom: 68px;
     @include medium {
-      display: flex;
-      @include scroll("x", "touch", "hide");
+      display: block;
+      font-size: 0;
+      padding-left: 32px;
+      padding-right: 32px;
+      margin-bottom: 34px;
+      @include scroll("x", touch, "hide");
+    }
+    @include small {
+      padding-left: 20px;
+      padding-right: 20px;
     }
   }
   &__action {
     display: inline-block;
     vertical-align: middle;
+    @include medium {
+      margin-left: 32px;
+    }
+    @include small {
+      margin-left: 20px;
+    }
+  }
+  &__copyright {
+    display: none;
+    @include medium {
+      display: block;
+      padding: 20px;
+    }
+    @include small {
+      padding-bottom: 12px;
+    }
+    &__txt {
+      @include medium {
+        margin-bottom: 0;
+        letter-spacing: 0.15em;
+      }
+      @include small {
+        @include font-size(h6);
+      }
+    }
   }
   .card-primary {
     margin-bottom: 42px;
+    @include medium {
+      display: inline-block;
+      vertical-align: top;
+      margin-bottom: 0;
+      width: 308px;
+      margin-right: 20px;
+      white-space: normal;
+      &__img {
+        &__el {
+        }
+      }
+    }
+    @include retina {
+      width: 240px;
+    }
     &:last-child {
       margin-bottom: 0;
+      @include medium {
+        margin-right: 0;
+      }
     }
   }
 }

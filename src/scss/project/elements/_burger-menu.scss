@@ -28,6 +28,9 @@
     border-radius: 1px;
     background-color: color(black);
     margin-bottom: 12px;
+    @include small {
+      margin-bottom: 8px;
+    }
     &::after {
       content: "";
       display: block;

@@ -16,6 +16,10 @@
     left: 20px;
     right: 20px;
     border-bottom: 1px solid color(grey);
+    @include small {
+      left: 10px;
+      right: 10px;
+    }
   }
   &__content {
     padding-top: 14px;
@@ -30,6 +34,19 @@
     letter-spacing: 0.3em;
     font-family: ff(secondary);
     color: color(primary);
+    @include small {
+      font-size: 1.35rem;
+      line-height: 2.4rem;
+    }
+    @include mq(408px) {
+      font-size: 1.2rem;
+    }
+    @include mq(370px) {
+      font-size: 1.1rem;
+    }
+    @include mq(342px) {
+      font-size: 1rem;
+    }
     a {
       text-decoration: none;
       color: color(primary);
@@ -37,6 +54,19 @@
     span {
       margin-left: 12px;
       @include font-size(h3-b);
+      @include small {
+        @include font-size(h6);
+        margin-left: 8px;
+      }
+      @include mq(408px) {
+        font-size: 1rem;
+      }
+      @include mq(370px) {
+        font-size: 0.9rem;
+      }
+      @include mq(342px) {
+        font-size: 0.8rem;
+      }
     }
   }
   &__search {

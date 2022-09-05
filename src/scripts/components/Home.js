@@ -4,6 +4,16 @@
 --------------------------------------------------------------------------------- */
 
 const Home = (() => {
+  // - handleScrollHorizontal
+  const handleScrollHorizontal = () => {
+    // const _width = $(window).width();
+    // if (_width < 992) {
+    //   $(".home__list").css("width", _width);
+    // } else {
+    //   $(".home__list").removeAttr("style");
+    // }
+  };
+
   // - handleDropdownCategory
   const handleDropdownCategory = () => {
     $(".js-home-posts-category").on("click", (e) => {
@@ -55,6 +65,7 @@ const Home = (() => {
 
   // - init
   const init = () => {
+    handleScrollHorizontal();
     handleDropdownCategory();
     handleCloseDropdownCategory();
     handleClickSubCategory();
@@ -62,6 +73,7 @@ const Home = (() => {
 
   return {
     init,
+    setScrollHorizontal: handleScrollHorizontal,
   };
 })();
 

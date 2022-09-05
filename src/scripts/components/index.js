@@ -3,6 +3,8 @@
 @description: Indexing all components
 --------------------------------------------------------------------------------- */
 
+import WindowResize from "./WindowResize";
+import WindowScroll from "./WindowScroll";
 import Header from "./Header";
 import Search from "./Search";
 import Home from "./Home";
@@ -12,4 +14,15 @@ import Landing from "./Landing";
 import Single from "./Single";
 import Default from "./Default";
 
-export { Header, Search, Home, Sort, Category, Landing, Single, Default };
+export {
+  WindowResize,
+  WindowScroll,
+  Header,
+  Search,
+  Home,
+  Sort,
+  Category,
+  Landing,
+  Single,
+  Default,
+};

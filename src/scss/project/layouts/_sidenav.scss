@@ -7,15 +7,27 @@
   @include large {
     margin-bottom: 52px;
   }
+  .homepage & {
+    @include medium {
+      margin-bottom: 36px;
+    }
+  }
   &__head {
     display: flex;
     justify-content: space-between;
+    @include medium {
+      align-items: center;
+    }
   }
   &__logo {
     display: inline-block;
     vertical-align: middle;
     width: 54px;
     height: 52px;
+    @include small {
+      width: 46px;
+      height: 44px;
+    }
     &__el {
       display: block;
       width: 100%;
