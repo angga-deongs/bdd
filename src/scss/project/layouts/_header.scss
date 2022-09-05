@@ -13,8 +13,15 @@
   color: color(white);
   @include scroll("y", auto, "hide");
   transition: all 0.4s ease;
+  @include medium {
+    width: 100%;
+    left: -100%;
+  }
   .show-navigation & {
     transform: translateX(720px);
+    @include medium {
+      transform: translateX(100%);
+    }
   }
   &__content {
     position: relative;
@@ -24,10 +31,29 @@
     transform: translateX(-8px);
     transition: all 0.3s ease;
     transition-delay: 0s;
+    @include medium {
+      padding-right: 32px;
+      padding-left: 32px;
+    }
+    @include small {
+      padding: 18px 20px 40px;
+    }
     .show-navigation & {
       opacity: 1;
       transform: none;
       transition-delay: 0.4s;
+    }
+  }
+  &__nav {
+    @include medium {
+      transition: all 0.3s ease;
+      transition-delay: 0.3s;
+    }
+    .show-search & {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition-delay: 0s;
     }
   }
   &__top {
@@ -58,14 +84,23 @@
     text-transform: uppercase;
     padding-bottom: 130px;
     position: relative;
+    @include small {
+      padding-bottom: 80px;
+    }
   }
   &__item {
     margin-bottom: 10px;
+    @include medium {
+      margin-bottom: 9px;
+    }
     &:last-child {
       margin-bottom: 0;
     }
     &.has-sub-category {
       margin-bottom: 6px;
+      @include medium {
+        margin-bottom: 5px;
+      }
       &:last-child {
         margin-bottom: 0;
       }
@@ -79,6 +114,9 @@
     list-style: none;
     padding-left: 0;
     margin-bottom: 30px;
+    @include medium {
+      margin-bottom: 27px;
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -89,6 +127,9 @@
     display: inline-block;
     vertical-align: middle;
     @include font-size(h3-b);
+    @include small {
+      @include font-size(h4-a);
+    }
     .fi-arrow-down {
       display: inline-block;
       vertical-align: middle;
@@ -130,6 +171,14 @@
     left: 40px;
     right: 20px;
     bottom: 24px;
+    @include medium {
+      left: 32px;
+      right: 32px;
+    }
+    @include small {
+      left: 20px;
+      right: 20px;
+    }
   }
   &__socmed {
     padding-left: 0;
@@ -157,16 +206,77 @@
     margin-bottom: 0;
     letter-spacing: 0.15em;
     @include font-size(h3-b);
+    @include small {
+      @include font-size(h6);
+    }
   }
   &__search {
     display: none;
     @include medium {
       display: block;
+      width: 100%;
       opacity: 0;
       visibility: hidden;
       position: absolute;
-      top: 0;
+      top: 40px;
       left: 0;
+      transform: translateY(8px);
+      transition: all 0.3s ease;
+      transition-delay: 0s;
+      .show-search & {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        transition-delay: 0.3s;
+      }
+    }
+    &__form {
+      position: relative;
+    }
+    &__input {
+      padding: 0 0 5px;
+      width: 100%;
+      border: 0;
+      outline: 0;
+      background-color: transparent;
+      border-bottom: 1px solid color(border);
+      letter-spacing: 0.15em;
+      color: color(white);
+      @include font-size(h4-a);
+      @include placeholder-color(color(placeholder));
+      @include medium {
+        padding-right: 40px;
+      }
+    }
+    &__btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 24px;
+      height: 24px;
+      color: color(white);
+    }
+    &-btn {
+      display: none;
+      @include medium {
+        display: flex;
+        align-items: center;
+        color: color(white);
+        font-weight: fw(light);
+        .fi-search {
+          margin-right: 10px;
+        }
+      }
+      span {
+        @include medium {
+          @include font-size(h3-b);
+          text-transform: uppercase;
+          letter-spacing: 0.3em;
+        }
+        @include small {
+          @include font-size(h4-a);
+        }
+      }
     }
   }
 }
@@ -186,6 +296,5 @@
   .show-navigation & {
     opacity: 1;
     visibility: visible;
-    // transition: all 0.3s ease;
   }
 }

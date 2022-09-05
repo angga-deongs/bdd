@@ -7,6 +7,9 @@
   @include large {
     margin-bottom: 52px;
   }
+  @include medium {
+    margin-bottom: 0;
+  }
   .homepage & {
     @include medium {
       margin-bottom: 36px;

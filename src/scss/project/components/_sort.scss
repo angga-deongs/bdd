@@ -3,8 +3,13 @@
    ========================================================================== */
 
 .sort {
-  width: 77px;
   position: relative;
+  @include medium {
+    margin-left: 32px;
+  }
+  @include small {
+    margin-left: 20px;
+  }
   &__btn {
     .show-sort & {
       border-bottom-color: transparent;

@@ -15,6 +15,9 @@
   table,
   form {
     max-width: 94.084%;
+    @include small {
+      max-width: initial;
+    }
   }
   h1,
   h2,
@@ -25,10 +28,16 @@
     font-weight: fw(regular);
     margin-bottom: 24px;
     letter-spacing: 0.03em;
+    @include small {
+      @include font-size(h4);
+    }
   }
   p {
     margin-bottom: 24px;
     letter-spacing: 0.03em;
+    @include small {
+      @include font-size(h4);
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -53,9 +62,13 @@
           transform: translateY(-50%);
           margin-top: -15px;
           transition: all 0.3s ease;
+          @include medium {
+            width: 32px;
+            height: 32px;
+          }
           @include small {
-            width: 45px;
-            height: 45px;
+            width: 24px;
+            height: 24px;
           }
           span {
             display: none;
@@ -106,6 +119,9 @@
         letter-spacing: 0.15em;
         color: color(grey);
         @include font-size(h6);
+        @include small {
+          @include font-size(small);
+        }
       }
     }
     &-embed__wrapper {

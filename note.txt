@@ -28,19 +28,20 @@ Mobile
 
 
 5
-- Home []
-- Category []
-- Search Result []
-- Participants []
+- Home [*]
+- Category [*]
+- Participants [*]
+- Search Result [*]
+- Landing [*]
+- About BDD [*]
+- Strategic Partner [*]
+- 404 [*]
 
 6
 - Single []
 - Single Participants []
 - Archive []
-- About BDD []
-- Strategic Partner []
 - Sponsors []
-- Landing []
 
 7
 

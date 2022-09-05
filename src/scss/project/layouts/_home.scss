@@ -2,9 +2,15 @@
    Layouts: Home
    ========================================================================== */
 
+.snap {
+  @include medium {
+    height: 100%;
+  }
+}
+
 .home {
   @include medium {
-    height: 100vh;
+    height: 100%;
     padding-top: 80px;
     @include scroll("y", auto, "hide");
   }
@@ -124,7 +130,7 @@
     @include medium {
       overflow: initial;
       text-overflow: initial;
-      padding-right: 10px;
+      margin-right: 10px;
     }
     &__name {
       margin-right: 12px;
@@ -274,10 +280,10 @@
     display: none;
     @include medium {
       display: block;
-      padding: 20px;
+      padding: 20px 32px;
     }
     @include small {
-      padding-bottom: 12px;
+      padding: 20px 20px 12px;
     }
     &__txt {
       @include medium {
@@ -299,7 +305,16 @@
       margin-right: 20px;
       white-space: normal;
       &__img {
+        @include medium {
+          height: 192px;
+        }
         &__el {
+          @include medium {
+            width: initial;
+            object-fit: contain;
+            object-position: left top;
+            height: 100%;
+          }
         }
       }
     }

@@ -9,6 +9,12 @@
   width: 100%;
   background-color: color(white);
   z-index: zi(top);
+  @include medium {
+    position: fixed;
+    .homepage & {
+      position: absolute;
+    }
+  }
   &::after {
     content: "";
     position: absolute;
@@ -27,6 +33,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include medium {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
   }
   &__txt {
     cursor: pointer;

@@ -30,9 +30,10 @@
               h2.layout-primary__name !{data.category}
 
           include ../components/sort.pug
-        .layout-primary__list.js-layout-primary
-          .layout-primary__sizer
-          each item in data.list
-            include ../components/card-primary.pug
-        include ../components/pagination.pug
+        .layout-primary__body
+          .layout-primary__list.js-layout-primary
+            .layout-primary__sizer
+            each item in data.list
+              include ../components/card-primary.pug
+          include ../components/pagination.pug
 ///layout-primary

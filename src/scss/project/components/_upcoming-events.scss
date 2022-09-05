@@ -13,6 +13,9 @@
   p {
     letter-spacing: 0.03em;
     margin-bottom: 27px;
+    @include small {
+      @include font-size(h4);
+    }
   }
   .wp-block-button__link {
     display: inline-block;

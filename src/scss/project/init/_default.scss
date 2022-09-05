@@ -2,6 +2,12 @@
    Init: Default
    ========================================================================== */
 
+html.homepage {
+  @include medium {
+    height: 100%;
+  }
+}
+
 body {
   font-family: ff(primary);
   font-weight: fw(light);
@@ -17,6 +23,11 @@ body {
     *::before,
     *::after {
       transition: none !important;
+    }
+  }
+  .homepage & {
+    @include medium {
+      height: 100%;
     }
   }
 }

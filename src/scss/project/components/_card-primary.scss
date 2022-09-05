@@ -16,17 +16,8 @@
   }
   &__img {
     margin: 0 0 17px;
-    @include medium {
-      height: 192px;
-    }
     &__el {
       width: 100%;
-      @include medium {
-        width: initial;
-        object-fit: contain;
-        object-position: left top;
-        height: 100%;
-      }
     }
   }
   &__title {

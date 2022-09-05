@@ -4,6 +4,15 @@
 
 .default {
   $d: &;
+  @include medium {
+    padding-top: 80px;
+  }
+  .container {
+    @include medium {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
   &__content {
     display: flex;
     flex-wrap: wrap;
@@ -12,6 +21,11 @@
     @include large {
       margin-left: -16px;
       margin-right: -16px;
+    }
+    @include medium {
+      display: block;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
   &__side,
@@ -27,6 +41,7 @@
     }
     @include medium {
       height: initial;
+      border-right: none;
     }
     &:last-child {
       border-right: 0;
@@ -36,16 +51,37 @@
     flex: 0 0 25%;
     @include medium {
       flex: 0 0 100%;
+      border-right: 0;
+      padding: 0;
+      margin-bottom: 32px;
     }
     &__list {
       list-style: none;
       padding-left: 0;
       margin-bottom: 0;
+      @include medium {
+        padding-left: 32px;
+        padding-right: 32px;
+        display: flex;
+        flex-wrap: nowrap;
+        @include scroll("x", touch, "hide");
+      }
+      @include small {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
     }
     &__item {
       transition: all 0.3s ease;
       margin-bottom: 10px;
       line-height: 1;
+      @include medium {
+        margin-right: 12px;
+        margin-bottom: 0;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
       &:last-child {
         margin-bottom: 0;
       }
@@ -60,18 +96,43 @@
       text-decoration: none;
       text-transform: uppercase;
       @include font-size(h3-b);
+      @include medium {
+        display: block;
+      }
+      @include small {
+        @include font-size(h4-b);
+      }
     }
   }
   &__posts {
     flex: 0 0 50%;
     @include medium {
       flex: 0 0 100%;
+      padding: 0 32px 42px;
+    }
+    @include small {
+      padding-left: 20px;
+      padding-right: 20px;
     }
   }
   &__related {
     flex: 0 0 25%;
     @include medium {
       flex: 0 0 100%;
+      padding: 34px 32px 0;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 20px;
+        right: 20px;
+        border-bottom: 1px solid color(grey);
+      }
+    }
+    @include small {
+      padding-left: 20px;
+      padding-right: 20px;
     }
     &__title {
       text-transform: uppercase;
@@ -81,10 +142,20 @@
       @include large {
         @include font-size(h3);
       }
+      @include medium {
+        @include font-size(h4-a);
+        margin-bottom: 26px;
+      }
     }
   }
   &__img {
     margin: 0 0 29px;
+    @include medium {
+      margin-bottom: 24px;
+    }
+    @include small {
+      margin-bottom: 18px;
+    }
     &__el {
       width: 100%;
     }
@@ -92,6 +163,12 @@
   &__head {
     margin-bottom: 82px;
     transform: translateY(-3px);
+    @include medium {
+      margin-bottom: 24px;
+    }
+    @include small {
+      margin-bottom: 16px;
+    }
   }
   &__title {
     text-transform: uppercase;
@@ -101,6 +178,9 @@
     @include large {
       @include font-size(h3);
     }
+    @include medium {
+      @include font-size(h2);
+    }
   }
   &__body__title {
     text-transform: uppercase;
@@ -108,14 +188,41 @@
     letter-spacing: 0.15em;
     margin-bottom: 40px;
     @include font-size(h1);
+    @include medium {
+      @include font-size(h2);
+    }
+    @include small {
+      @include font-size(h4-b);
+    }
   }
   &__txt {
     @include the-content;
+  }
+  .sidenav {
+    @include medium {
+      margin-bottom: 56px;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+    @include small {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
   &--strategic-partner {
     #{$d} {
       &__img__el {
         width: initial;
+      }
+    }
+  }
+  &--not-found {
+    .sidenav {
+      margin-bottom: 0;
+    }
+    #{$d} {
+      &__head {
+        margin-bottom: 0;
       }
     }
   }

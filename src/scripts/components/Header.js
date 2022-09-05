@@ -67,11 +67,31 @@ const Header = (() => {
     });
   };
 
+  // handleSearchMenu
+  const handleSearchMenu = () => {
+    $(".js-header-search-btn").on("click", (e) => {
+      $(".header").addClass("show-search");
+      setTimeout(() => {
+        $(".header__search__input").focus();
+      }, 500);
+      e.stopPropagation();
+    });
+    $("body").on("click", () => {
+      if ($(".header").hasClass("show-search")) {
+        $(".header").removeClass("show-search");
+      }
+    });
+    $(".header__search").on("click", (e) => {
+      e.stopPropagation();
+    });
+  };
+
   // - init
   const init = () => {
     handleMobileMenu();
     handleCloseMobileMenu();
     handleDropdownMenu();
+    handleSearchMenu();
   };
 
   return {

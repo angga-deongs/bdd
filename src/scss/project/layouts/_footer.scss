@@ -6,5 +6,18 @@
   display: none;
   @include medium {
     display: block;
+    padding-bottom: 20px;
+  }
+  @include small {
+    padding-bottom: 12px;
+  }
+  &__copyright {
+    @include medium {
+      margin-bottom: 0;
+      letter-spacing: 0.15em;
+    }
+    @include small {
+      @include font-size(h6);
+    }
   }
 }

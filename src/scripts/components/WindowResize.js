@@ -4,7 +4,7 @@
 ----------------------------------------
 */
 
-import { Home } from "components";
+import { Home, Category } from "components";
 
 const WindowResize = (() => {
   let _timeout = false,
@@ -32,6 +32,7 @@ const WindowResize = (() => {
       _timeout = false; // run function on Resize end
       $("body").removeClass("hold-transition");
       Home.setScrollHorizontal();
+      Category.setCategory();
     }
   };
 

@@ -33,15 +33,29 @@ const Default = (() => {
       const _target = _this.attr("data-target");
       const _topHeight = $(".top").height();
       if (!_this.parents("li").hasClass("active")) {
-        $(".default__posts").animate(
-          {
-            scrollTop:
-              $('.default__txt h3[data-pane="' + _target + '"]').offset().top -
-              _topHeight -
-              48,
-          },
-          500
-        );
+        if ($(window).width() >= 992) {
+          $(".default__posts").animate(
+            {
+              scrollTop:
+                $('.default__txt h3[data-pane="' + _target + '"]').offset()
+                  .top -
+                _topHeight -
+                48,
+            },
+            500
+          );
+        } else {
+          $("html, body").animate(
+            {
+              scrollTop:
+                $('.default__txt h3[data-pane="' + _target + '"]').offset()
+                  .top -
+                _topHeight -
+                48,
+            },
+            500
+          );
+        }
       }
       e.preventDefault();
     });
@@ -49,23 +63,43 @@ const Default = (() => {
 
   // - handleScrollSideMenu
   const handleScrollSideMenu = () => {
-    $(".default__posts").on("scroll", () => {
-      $(".default__txt h3").each((i, v) => {
-        const _scrollTop = $(window).scrollTop();
-        const _this = $(v);
-        const _target = _this.attr("data-pane");
-        const _offsetTop =
-          $('.default__txt h3[data-pane="' + _target + '"]').offset().top -
-          $(".default__side__list").height() -
-          $(".top").height();
-        if (_scrollTop > _offsetTop) {
-          $(".default__side__item").removeClass("active");
-          $('.default__side__item a[data-target="' + _target + '"]')
-            .parent()
-            .addClass("active");
-        }
+    if ($(window).width() >= 992) {
+      $(".default__posts").on("scroll", () => {
+        $(".default__txt h3").each((i, v) => {
+          const _scrollTop = $(window).scrollTop();
+          const _this = $(v);
+          const _target = _this.attr("data-pane");
+          const _offsetTop =
+            $('.default__txt h3[data-pane="' + _target + '"]').offset().top -
+            $(".default__side__list").height() -
+            $(".top").height();
+          if (_scrollTop > _offsetTop) {
+            $(".default__side__item").removeClass("active");
+            $('.default__side__item a[data-target="' + _target + '"]')
+              .parent()
+              .addClass("active");
+          }
+        });
       });
-    });
+    } else {
+      $(window).on("scroll", () => {
+        $(".default__txt h3").each((i, v) => {
+          const _scrollTop = $(window).scrollTop();
+          const _this = $(v);
+          const _target = _this.attr("data-pane");
+          const _offsetTop =
+            $('.default__txt h3[data-pane="' + _target + '"]').offset().top -
+            $(".default__side__list").height() -
+            $(".top").height();
+          if (_scrollTop > _offsetTop) {
+            $(".default__side__item").removeClass("active");
+            $('.default__side__item a[data-target="' + _target + '"]')
+              .parent()
+              .addClass("active");
+          }
+        });
+      });
+    }
   };
 
   // - init
