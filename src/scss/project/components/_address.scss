@@ -7,12 +7,26 @@
     letter-spacing: 0.25em;
     text-transform: uppercase;
     margin-bottom: 22px;
+    @include small {
+      @include font-size(h4-b);
+    }
   }
   p {
     margin-bottom: 24px;
+    @include small {
+      @include font-size(h4-b);
+    }
   }
   a {
     color: color(primary);
     text-decoration: none;
+    @include small {
+      @include font-size(h4-b);
+    }
+  }
+  li {
+    @include small {
+      @include font-size(h4-b);
+    }
   }
 }

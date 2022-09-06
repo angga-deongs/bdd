@@ -4,9 +4,6 @@
 
 .default {
   $d: &;
-  @include medium {
-    padding-top: 80px;
-  }
   .container {
     @include medium {
       padding-left: 0;
@@ -41,7 +38,7 @@
     }
     @include medium {
       height: initial;
-      border-right: none;
+      border-right: 0;
     }
     &:last-child {
       border-right: 0;

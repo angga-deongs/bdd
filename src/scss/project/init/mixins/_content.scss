@@ -48,6 +48,9 @@
   }
   .wp-block {
     &-gallery {
+      .main-site--hide & {
+        opacity: 0;
+      }
       &.has-nested-images figure.wp-block-image:not(#individual-image) {
         width: 100%;
         margin: 0;
@@ -101,6 +104,9 @@
     &-image {
       margin: 0;
       width: 100%;
+      .main-site--hide & {
+        opacity: 0;
+      }
       &-box {
         position: relative;
         width: 100%;
@@ -129,6 +135,9 @@
       overflow: hidden;
       width: 100%;
       padding-bottom: 56.25%;
+      .main-site--hide & {
+        opacity: 0;
+      }
       iframe {
         position: absolute;
         top: 0;

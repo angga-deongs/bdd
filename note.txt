@@ -38,12 +38,13 @@ Mobile
 - 404 [*]
 
 6
-- Single []
+- Archive [*]
+- Sponsors [*]
+- Single [*]
 - Single Participants []
-- Archive []
-- Sponsors []
 
 7
+feedback
 
 
 8

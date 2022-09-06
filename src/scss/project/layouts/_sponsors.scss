@@ -3,11 +3,19 @@
    ========================================================================== */
 
 .sponsors {
+  $s: &;
+  @include medium {
+    padding-top: 80px;
+  }
   &__content {
     display: flex;
     flex-wrap: wrap;
     margin-left: -20px;
     margin-right: -20px;
+    @include medium {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
   &__side,
   &__posts {
@@ -17,6 +25,8 @@
     @include scroll("y", auto, "hide");
     @include medium {
       height: initial;
+      padding: 0;
+      border-right: 0;
     }
     &:last-child {
       border-right: 0;
@@ -26,8 +36,9 @@
     flex: 0 0 25%;
     @include medium {
       flex: 0 0 100%;
+      margin-bottom: 56px;
     }
-    .sponsors__txt {
+    #{$s}__txt {
       @include medium {
         display: none;
       }
@@ -42,10 +53,24 @@
   &__head {
     margin-bottom: 82px;
     transform: translateY(-3px);
-    .sponsors__txt {
+    @include medium {
+      transform: none;
+      margin-bottom: 32px;
+    }
+    #{$s}__txt {
       display: none;
       @include medium {
         display: block;
+        p {
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      p {
+        @include small {
+          @include font-size(h4-b);
+        }
       }
     }
   }
@@ -54,9 +79,24 @@
     color: color(primary);
     letter-spacing: 0.15em;
     margin-bottom: 0;
+    @include medium {
+      margin-bottom: 14px;
+    }
+    @include small {
+      @include font-size(h4-b);
+    }
   }
   &__row {
     margin-bottom: 70px;
+    @include medium {
+      margin-bottom: 56px;
+    }
+    @include small {
+      margin-bottom: 36px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   &__subtitle {
     letter-spacing: 0.15em;
@@ -64,29 +104,60 @@
     text-transform: uppercase;
     margin-bottom: 24px;
     @include font-size(h3-b);
+    @include medium {
+      margin-bottom: 22px;
+    }
+    @include small {
+      margin-bottom: 20px;
+    }
   }
   &__list {
-    font-size: 0;
     list-style: none;
     padding-left: 0;
     margin: -20px -20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    @include medium {
+      margin-left: -14px;
+      margin-right: -14px;
+    }
+    @include small {
+      margin-top: -12px;
+    }
   }
   &__item {
-    display: inline-block;
-    vertical-align: middle;
     padding: 20px;
+    @include medium {
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+    @include small {
+      flex: 0 0 50%;
+      width: 50%;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
   }
   &__img {
     margin: 0;
-    max-width: 230px;
-    max-height: 70px;
     cursor: pointer;
     &__el {
-      width: 100%;
-      height: 100%;
+      max-width: 230px;
+      max-height: 70px;
       object-fit: contain;
-      filter: grayscale(100%);
       transition: all 0.3s ease;
+      filter: grayscale(100%);
+      @include medium {
+        max-width: 200px;
+        max-height: 56px;
+      }
+      @include small {
+        width: 100%;
+        height: 100%;
+        max-height: 52px;
+        max-width: initial;
+      }
       &:hover {
         filter: grayscale(0);
       }

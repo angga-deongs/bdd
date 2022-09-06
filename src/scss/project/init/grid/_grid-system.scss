@@ -23,6 +23,7 @@
   width: 100%;
   position: relative;
   @include medium {
+    padding-top: 80px;
     padding-bottom: 72px;
     .homepage & {
       height: 100%;

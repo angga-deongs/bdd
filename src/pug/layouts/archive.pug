@@ -8,17 +8,20 @@
     .archive__content
       section.archive__side
         include sidenav.pug
-        h3.archive__side__title Archive
-        ul.archive__side__list
-          li.archive__side__item.active
+        .archive__side__inner
+          h3.archive__side__title Archive
             =`\n`
-            a.archive__side__link(href='archive.html') 2019
-          li.archive__side__item
-            =`\n`
-            a.archive__side__link(href='archive.html') 2018
-          li.archive__side__item
-            =`\n`
-            a.archive__side__link(href='archive.html') 2017
+            i.fi.fi-arrow-right
+          ul.archive__side__list
+            li.archive__side__item.active
+              =`\n`
+              a.archive__side__link(href='archive.html') 2019
+            li.archive__side__item
+              =`\n`
+              a.archive__side__link(href='archive.html') 2018
+            li.archive__side__item
+              =`\n`
+              a.archive__side__link(href='archive.html') 2017
       section.archive__posts
         .archive__head
           h2.archive__title 2019 : inclusivity

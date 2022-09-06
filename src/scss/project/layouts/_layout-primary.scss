@@ -4,9 +4,6 @@
 
 .layout-primary {
   $lp: &;
-  @include medium {
-    padding-top: 80px;
-  }
   .container {
     @include medium {
       padding-left: 0;
@@ -39,7 +36,7 @@
     border-right: 1px solid color(grey);
     @include medium {
       flex: 0 0 100%;
-      border-right: none;
+      border-right: 0;
       margin-bottom: 56px;
     }
   }

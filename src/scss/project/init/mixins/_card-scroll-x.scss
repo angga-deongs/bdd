@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Card Scroll X
+   ========================================================================== */
+
+@mixin cards-scroll-x {
+  .card-primary {
+    margin-bottom: 42px;
+    @include medium {
+      display: inline-block;
+      vertical-align: top;
+      margin-bottom: 0;
+      width: 308px;
+      margin-right: 20px;
+      white-space: normal;
+      &__img {
+        @include medium {
+          height: 192px;
+        }
+        &__el {
+          @include medium {
+            width: initial;
+            object-fit: contain;
+            object-position: left top;
+            height: 100%;
+          }
+        }
+      }
+    }
+    @include retina {
+      width: 240px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+      @include medium {
+        margin-right: 0;
+      }
+    }
+  }
+}
