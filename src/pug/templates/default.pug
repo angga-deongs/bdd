@@ -157,9 +157,10 @@ html(lang='en')
     //- footer
     include ../layouts/footer.pug
 
-    ='\n\n'
-
     if schema.enable
+
+      ='\n\n'
+
       // schema organization
       script(type='application/ld+json').
         {
