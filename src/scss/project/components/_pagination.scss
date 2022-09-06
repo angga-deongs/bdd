@@ -28,11 +28,17 @@
     text-decoration: none;
     transition: all 0.3s ease;
     letter-spacing: 0.03em;
+    @include small {
+      @include font-size(h4-b);
+    }
     &:hover {
       color: color(primary);
     }
   }
   .current {
     color: color(primary);
+    @include small {
+      @include font-size(h4-b);
+    }
   }
 }
