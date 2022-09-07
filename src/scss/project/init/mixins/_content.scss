@@ -48,6 +48,9 @@
   }
   .wp-block {
     &-gallery {
+      margin-top: 0;
+      margin-left: 0;
+      margin-right: 0;
       .main-site--hide & {
         opacity: 0;
       }

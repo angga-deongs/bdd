@@ -17,6 +17,14 @@
       @include font-size(h4);
     }
   }
+  a {
+    text-decoration: none;
+    color: color(primary);
+    transition: all 0.3s ease;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
   .wp-block-button__link {
     display: inline-block;
     vertical-align: middle;
@@ -28,7 +36,9 @@
     padding: 5px 8px;
     border-radius: 2px;
     min-width: 84px;
+    color: color(black);
     border: 1px solid color(black);
+    @include font-size(h3);
     &:hover {
       background-color: color(silver);
     }

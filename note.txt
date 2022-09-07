@@ -24,7 +24,7 @@ Mobile
 - Auto Scroll [*]
 
 2
-- feedback
+- feedback [*]
 
 
 5
@@ -41,16 +41,32 @@ Mobile
 - Archive [*]
 - Sponsors [*]
 - Single [*]
-- Single Participants []
+- Single Participants [*]
 
 7
-feedback
+Components
+- Top [*]
+- Sidenav [*]
+- Upcoming Events [*]
+- Landing [*]
 
+Pages
+- About BDD []
+- Strategic Partner []
+- Search Result []
+- 404 []
+- Sponsors []
+- Participants []
+- Archive []
+- Single []
+- Single Participants []
 
 8
-
+- Home []
+- Category []
 
 9
+- feedback []
 
 
 12

@@ -179,21 +179,23 @@
       @include font-size(h2);
     }
   }
-  &__body__title {
-    text-transform: uppercase;
-    color: color(primary);
-    letter-spacing: 0.15em;
-    margin-bottom: 40px;
-    @include font-size(h1);
-    @include medium {
-      @include font-size(h2);
-    }
-    @include small {
-      @include font-size(h4-b);
-    }
-  }
-  &__txt {
+  &__body {
     @include the-content;
+    h2 {
+      text-transform: uppercase;
+      color: color(primary);
+      letter-spacing: 0.15em;
+      margin-bottom: 40px;
+      font-weight: fw(light);
+      @include font-size(h1);
+      @include medium {
+        margin-bottom: 24px;
+        @include font-size(h2);
+      }
+      @include small {
+        @include font-size(h4-b);
+      }
+    }
   }
   .sidenav {
     @include medium {
@@ -206,6 +208,7 @@
       padding-right: 20px;
     }
   }
+
   &--strategic-partner {
     #{$d} {
       &__img__el {
