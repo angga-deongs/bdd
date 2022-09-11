@@ -6,9 +6,9 @@
 const Default = (() => {
   // - handleSetSideMenu
   const handleSetSideMenu = () => {
-    if ($(".default__txt").length) {
+    if ($(".default__body").length) {
       let _menu = "";
-      $(".default__txt h3").each((i, v) => {
+      $(".default__body h3").each((i, v) => {
         // set tab
         $(v).attr("data-pane", i);
         const _txt = $(v).text();
@@ -37,7 +37,7 @@ const Default = (() => {
           $(".default__posts").animate(
             {
               scrollTop:
-                $('.default__txt h3[data-pane="' + _target + '"]').offset()
+                $('.default__body h3[data-pane="' + _target + '"]').offset()
                   .top -
                 _topHeight -
                 48,
@@ -48,7 +48,7 @@ const Default = (() => {
           $("html, body").animate(
             {
               scrollTop:
-                $('.default__txt h3[data-pane="' + _target + '"]').offset()
+                $('.default__body h3[data-pane="' + _target + '"]').offset()
                   .top -
                 _topHeight -
                 48,
@@ -65,12 +65,12 @@ const Default = (() => {
   const handleScrollSideMenu = () => {
     if ($(window).width() >= 992) {
       $(".default__posts").on("scroll", () => {
-        $(".default__txt h3").each((i, v) => {
+        $(".default__body h3").each((i, v) => {
           const _scrollTop = $(window).scrollTop();
           const _this = $(v);
           const _target = _this.attr("data-pane");
           const _offsetTop =
-            $('.default__txt h3[data-pane="' + _target + '"]').offset().top -
+            $('.default__body h3[data-pane="' + _target + '"]').offset().top -
             $(".default__side__list").height() -
             $(".top").height();
           if (_scrollTop > _offsetTop) {
@@ -83,12 +83,12 @@ const Default = (() => {
       });
     } else {
       $(window).on("scroll", () => {
-        $(".default__txt h3").each((i, v) => {
+        $(".default__body h3").each((i, v) => {
           const _scrollTop = $(window).scrollTop();
           const _this = $(v);
           const _target = _this.attr("data-pane");
           const _offsetTop =
-            $('.default__txt h3[data-pane="' + _target + '"]').offset().top -
+            $('.default__body h3[data-pane="' + _target + '"]').offset().top -
             $(".default__side__list").height() -
             $(".top").height();
           if (_scrollTop > _offsetTop) {

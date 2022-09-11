@@ -48,15 +48,30 @@
   }
   .wp-block {
     &-gallery {
-      margin-top: 0;
-      margin-left: 0;
-      margin-right: 0;
+      margin: 0 0 24px;
       .main-site--hide & {
         opacity: 0;
       }
-      &.has-nested-images figure.wp-block-image:not(#individual-image) {
-        width: 100%;
-        margin: 0;
+      &.has-nested-images figure.wp-block-image {
+        &:not(#individual-image) {
+          width: 100%;
+          margin: 0;
+        }
+        figcaption {
+          background: initial;
+          bottom: initial;
+          left: initial;
+          position: relative;
+          margin-top: 12px;
+          letter-spacing: 0.15em;
+          color: color(grey);
+          padding: 0;
+          text-align: left;
+          @include font-size(h6);
+          @include small {
+            @include font-size(small);
+          }
+        }
       }
       &.owl-carousel {
         button.owl-prev,

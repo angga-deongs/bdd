@@ -51,19 +51,29 @@ Components
 - Landing [*]
 
 Pages
-- About BDD []
-- Strategic Partner []
-- Search Result []
-- 404 []
-- Sponsors []
-- Participants []
-- Archive []
-- Single []
-- Single Participants []
+- About BDD [*]
+- Strategic Partner [*]
+- Sponsors [*]
+- 404 [*]
+- Archives [*]
+- Header [*]
+- Participants [*]
+- Single Participants [*]
+- Single [*]
 
 8
+- Category [*]
+- Search Result [*]
+- Search Populated [*]
+- get ticket single post [*]
+- Single related article [*]
 - Home []
-- Category []
+- Archive []
+- Search Populated
+- Single Share whatsapp []
+- Single link google play []
+- Single link app store []
+- Size Image
 
 9
 - feedback []
