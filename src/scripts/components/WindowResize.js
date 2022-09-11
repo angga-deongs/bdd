@@ -31,7 +31,6 @@ const WindowResize = (() => {
     else {
       _timeout = false; // run function on Resize end
       $("body").removeClass("hold-transition");
-      Home.setScrollHorizontal();
       Category.setCategory();
     }
   };

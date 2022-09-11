@@ -4,16 +4,6 @@
 --------------------------------------------------------------------------------- */
 
 const Home = (() => {
-  // - handleScrollHorizontal
-  const handleScrollHorizontal = () => {
-    // const _width = $(window).width();
-    // if (_width < 992) {
-    //   $(".home__list").css("width", _width);
-    // } else {
-    //   $(".home__list").removeAttr("style");
-    // }
-  };
-
   // - handleDropdownCategory
   const handleDropdownCategory = () => {
     $(".js-home-posts-category").on("click", (e) => {
@@ -58,22 +48,45 @@ const Home = (() => {
         const _txt = _this.text();
         const _parents = _this.parents(".home__head");
         _parents.find(".home__current-category").text(_txt);
+        _this
+          .addClass("active")
+          .siblings(".home__sub-category__item")
+          .removeClass("active");
         e.stopPropagation();
       });
     }
   };
 
+  // - handleAjaxDropdown
+  const handleAjaxDropdown = () => {
+    $(".js-home-sub-category .home__sub-category__item").on("click", (e) => {
+      const _this = $(e.currentTarget);
+      const _category = _this.attr("data-id");
+      const _str = "&category=" + _category + "&action=dropdown_ajax";
+      $.ajax({
+        type: "POST",
+        dataType: "html",
+        url: ajax_posts.ajaxurl,
+        data: _str,
+        success: (data) => {
+          const _data = $(data);
+          _this.parents(".home__posts").find(".home__list").html(_data);
+        },
+        error: (data) => {},
+      });
+    });
+  };
+
   // - init
   const init = () => {
-    handleScrollHorizontal();
     handleDropdownCategory();
     handleCloseDropdownCategory();
     handleClickSubCategory();
+    handleAjaxDropdown();
   };
 
   return {
     init,
-    setScrollHorizontal: handleScrollHorizontal,
   };
 })();
 
