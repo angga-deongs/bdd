@@ -1,42 +1,46 @@
 <?php
-/*
-  Template Name: About
-*/
-?>
+/* Template Name: About */
 
-<?php
   $GLOBALS['current'] = 'about';
-  $fields = get_fields();
   get_header();
 ?>
 
 <!--main-site-->
 <main class="main-site main-site--hide js-main-site">
-  <!--banner-->
-  <section class="banner banner--about">
+  
+  <?php get_template_part("components/top") ?>
+
+  <!--default-->
+  <div class="default default--about">
     <div class="container">
-      <h1 class="title-seo"><?= the_title() ?></h1>
-      <div class="banner__list js-banner">
-        <?php if ($fields['banner']) foreach ($fields['banner'] as $value): ?>
-          <!--banner-item-->
-          <div class="banner__item">
-            <figure class="banner__img">
-              <img class="banner__img__el banner__img__el--d" src="<?= $value['image_d'] ?>" alt="<?= strip_tags($value['title']) ?>" />
-              <?php if ($value['image_m']): ?>
-                <img class="banner__img__el banner__img__el--m" src="<?= $value['image_m'] ?>" alt="<?= strip_tags($value['title']) ?>" />
-              <?php else: ?>
-                <img class="banner__img__el banner__img__el--m" src="<?= $value['image_d'] ?>" alt="<?= strip_tags($value['title']) ?>" />
-              <?php endif; ?>
-            </figure>
-            <h2 class="banner__title"><?= $value['title'] ?></h2>
+      <div class="default__content">
+        <section class="default__side">
+
+          <?php get_template_part("components/sidenav") ?>
+
+          <ul class="default__side__list js-default-side-list"></ul>
+        </section>
+        <section class="default__posts">
+          <div class="default__head">
+            <h2 class="default__title"><?= the_title() ?></h2>
           </div>
-        <?php endforeach; ?>
+          <div class="default__body">
+            <?= the_content() ?>
+          </div>
+        </section>
+        <section class="default__related">
+          <h2 class="default__related__title">Upcoming Events</h2>
+
+          <?php get_template_part("components/upcoming-events") ?>
+
+        </section>
       </div>
     </div>
-  </section>
-  <!--/.banner-->
+  </div>
+  <!--/default-->
+
 </main>
-<!--/.main-site-->
+<!--/main-site-->
 
 <?php
   get_footer();

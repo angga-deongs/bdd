@@ -37,19 +37,66 @@ function c6_wp_post_archives() {
     'show_ui' => true,
     'show_in_menu' => true,
     'query_var' => true,
-    'rewrite' => array('slug' => 'archive/detail'),
+    'rewrite' => array('slug' => 'archive/%archives_category%'),
     'capability_type' => 'post',
     'has_archive' => true,
     'show_in_rest' => true,
     'hierarchical' => true,
     'menu_position' => 4,
-    'taxonomies' => array(),
+    'taxonomies' => array('archives_category'),
     'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt')
   );
 
   register_post_type('archives', $args);
 
 }
+
+/* -------------------------------------------------------------------------- */
+/* Archives Category                                                          */
+/* -------------------------------------------------------------------------- */
+
+function register_taxonomy_archives_category() {
+
+  $archives_category_labels = array(
+    'name' => _x( 'Archives Category', 'taxonomy general name' ),
+    'singular_name' => _x( 'Archives Category', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Categories' ),
+    'all_items' => __( 'All Categories' ),
+    'parent_item' => __( 'Parent Category' ),
+    'parent_item_colon' => __( 'Parent Category:' ),
+    'edit_item' => __( 'Edit Category' ),
+    'update_item' => __( 'Update Category' ),
+    'add_new_item' => __( 'Add New Category' ),
+    'new_item_name' => __( 'New Category Name' ),
+    'menu_name' => __( 'Archives Categories' ),
+  );
+
+  register_taxonomy('archives_category', array('archives'), array(
+    'hierarchical' => true,
+    'labels' => $archives_category_labels,
+    'show_ui' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'archives/category' ),
+    'with_front' => false,
+    'show_in_rest' => true,
+  ));
+}
+
+add_action('init', 'register_taxonomy_archives_category', 0);
+
+function wpa_course_post_link( $post_link, $id = 0 ){
+  $post = get_post($id);  
+  if ( is_object( $post ) ){
+      $terms = wp_get_object_terms( $post->ID, 'archives_category' );
+      if( $terms ){
+          return str_replace( '%archives_category%' , $terms[0]->slug , $post_link );
+      }
+  }
+  return $post_link;  
+}
+
+add_filter( 'post_type_link', 'wpa_course_post_link', 1, 3 );
 
 /* -------------------------------------------------------------------------- */
 /* Participants                                                               */

@@ -1,6 +1,6 @@
 {
-  "short_name": "hirogroup",
-  "name": "hirogroup",
+  "short_name": "Bintaro Design District",
+  "name": "Bintaro Design District",
   "start_url": "../../../.",
   "icons": [
     {
@@ -40,7 +40,7 @@
       "density": "4.0"
     }
   ],
-  "background_color": "#808080",
-  "theme_color": "#808080",
+  "background_color": "#009fdf",
+  "theme_color": "#009fdf",
   "display": "standalone"
 }

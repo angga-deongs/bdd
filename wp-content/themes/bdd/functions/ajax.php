@@ -13,52 +13,46 @@ function c6_theme_enqueue_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'c6_theme_enqueue_scripts' );
 
+
 /* -------------------------------------------------------------------------- */
-/* News                                                                       */
+/* Ajax Dropdown                                                              */
 /* -------------------------------------------------------------------------- */
 
-function c6_more_news_ajax() {
-
-  $ppp = (isset($_POST["ppp"])) ? $_POST["ppp"] : 6;
-  $paged = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 0;
-
-  header("Content-Type: text/html");
+function dropdown_ajax() {
+  $category = $_POST['category'];
 
   $args = array(
-    'post_type' => 'news',
-    'posts_per_page' => $ppp,
+    'post_type' => 'post',
+    'posts_per_page' => 5,
     'post_status' => 'publish',
-    'paged' => $paged
+    'orderby' => 'post_date',
+    'order' => 'DESC',
+    'tax_query' => array(
+      array(
+        'taxonomy' => 'category',
+        'field' => 'term_id',
+        'terms' => $category
+      ),
+    ),
   );
 
-  $loop = new WP_Query($args);
-  if ($loop -> have_posts()) :  while ($loop -> have_posts()) : $loop -> the_post(); ?>
-    <?php
-    /* taxonomy category --------------------------------------------------------- */
-    $tax_category = [];
-    if (get_the_terms(get_the_ID(), 'news_category')) foreach (get_the_terms(get_the_ID(), 'news_category') as $category):
-      $tax_category[] = $category->name;
-    endforeach; 
-    ?>
-    <!--card-primary-->
-    <div class="card-primary">
-      <div class="card-primary__box">
-        <a class="card-primary__link" href="<?= the_permalink() ?>"><?= get_the_title() ?></a>
-        <figure class="card-primary__img">
-          <img class="card-primary__img__el" src="<?= get_the_post_thumbnail_url() ?>" alt="<?= get_the_title() ?>" />
-        </figure>
-        <h5 class="card-primary__category"><?= implode(',', $tax_category) ?></h5>
-        <h2 class="card-primary__title"><?= get_the_title() ?></h2>
-        <div class="card-primary__arrow">
-          <i class="fi fi-arrow-right"></i>
-        </div>
-      </div>
-    </div>
-    <!--/.card-primary-->
-  <?php endwhile; endif;
+  $query = new WP_Query($args);
+
+  if ($query->have_posts()):
+
+    while ($query->have_posts()) : $query->the_post();
+
+      get_template_part("components/card-primary");
+
+    endwhile;
+
+  endif;
+
   wp_reset_postdata();
+
   die();
+
 }
 
-add_action('wp_ajax_more_news_ajax', 'c6_more_news_ajax');
-add_action('wp_ajax_nopriv_more_news_ajax', 'c6_more_news_ajax');
+add_action( 'wp_ajax_dropdown_ajax', 'dropdown_ajax');
+add_action( 'wp_ajax_nopriv_dropdown_ajax', 'dropdown_ajax');

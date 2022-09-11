@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="sr">
+<html <?= (is_home() ? 'class="homepage"' : '') ?> lang="en">
 
 <head>
   <meta charset="utf-8" />
@@ -17,14 +17,14 @@
     <title><?php wp_title( '|', true, 'right' ); ?></title>
   <?php endif; ?>
   <meta name="description" content="<?= bloginfo('description') ?>" />
-  <meta name="keywords" content="<?= bloginfo('name') ?>, hirogroup, hiro group, hiro group indonesia" />
+  <meta name="keywords" content="<?= bloginfo('name') ?>, BDD, bdd, bintaro design district" />
 
   <!-- ie fix for html5 tags-->
   <!--[if lt IE 9]><script src='http://html5shiv.googlecode.com/svn/trunk/html5.js'></script><![endif]-->
 
   <!-- author-->
   <meta name="author" content="<?= bloginfo('name') ?>" />
-  <meta name="copyright" content="<?= date('Y') ?> &copy; Hiro Group" />
+  <meta name="copyright" content="© 2020 Bintaro Design District. All rights reserved." />
 
   <!-- user agent crawler-->
   <meta name="robots" content="index, follow" />
@@ -34,18 +34,15 @@
   <meta name="webcrawlers" content="index, follow" />
   <meta name="spiders" content="index, follow" />
 
-  <link rel="preload" as="font" href="<?= get_template_directory_uri() ?>/assets/fonts/Gotham-Medium.woff2" type="font/woff2" crossorigin="anonymous" />
-  <link rel="preload" as="font" href="<?= get_template_directory_uri() ?>/assets/fonts/Gotham-Medium.woff" type="font/woff" crossorigin="anonymous" />
-
   <!-- ============ icon ============-->
   <!-- web favicon-->
   <link rel="shortcut icon" href="<?= get_template_directory_uri() ?>/assets/img/homescreen/favicon.ico" />
 
   <!-- android add to home screen-->
   <link rel="manifest" href="<?= get_template_directory_uri() ?>/assets/js/data/manifest.json" />
-  <meta name="application-name" content="Hiro Group" />
+  <meta name="application-name" content="BINTATO DESIGN DISTRICT" />
   <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="theme-color" content="#808080" />
+  <meta name="theme-color" content="#009fdf" />
   <link rel="icon" type="image/png" sizes="16x16" href="<?= get_template_directory_uri() ?>/assets/img/homescreen/favicon-16x16.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="<?= get_template_directory_uri() ?>/assets/img/homescreen/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="96x96" href="<?= get_template_directory_uri() ?>/assets/img/homescreen/favicon-96x96.png" />
@@ -53,13 +50,13 @@
   <link rel="icon" type="image/png" sizes="192x192" href="<?= get_template_directory_uri() ?>/assets/img/homescreen/android-icon-192x192.png" />
 
   <!-- windows microsoft-->
-  <meta name="msapplication-TileColor" content="#808080" />
+  <meta name="msapplication-TileColor" content="#009fdf" />
   <meta name="msapplication-TileImage" content="<?= get_template_directory_uri() ?>/assets/img/homescreen/ms-icon-144x144.png" />
 
   <!-- apple add to home screen-->
   <meta name="apple-mobile-web-app-title" content="<?= bloginfo('name') ?>" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="#808080" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#009fdf" />
   <link rel="apple-touch-icon" href="<?= get_template_directory_uri() ?>/assets/img/homescreen/apple-icon.png" />
   <link rel="apple-touch-icon" sizes="57x57" href="<?= get_template_directory_uri() ?>/assets/img/homescreen/apple-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="<?= get_template_directory_uri() ?>/assets/img/homescreen/apple-icon-60x60.png" />
@@ -77,6 +74,6 @@
 
 </head>
 
-<body <?php body_class('hold-transition') ?>>
+<body class="hold-transition">
 
   <?php get_template_part("layouts/header") ?>
