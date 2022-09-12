@@ -3,9 +3,7 @@
    ========================================================================== */
 
 html.homepage {
-  @include medium {
-    height: 100%;
-  }
+  height: 100%;
 }
 
 body {
@@ -26,9 +24,7 @@ body {
     }
   }
   .homepage & {
-    @include medium {
-      height: 100%;
-    }
+    height: 100%;
   }
 }
 

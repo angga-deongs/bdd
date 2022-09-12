@@ -22,13 +22,13 @@
 .main-site {
   width: 100%;
   position: relative;
+  .homepage & {
+    height: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   @include medium {
     padding-top: 80px;
     padding-bottom: 72px;
-    .homepage & {
-      height: 100%;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
   }
 }
