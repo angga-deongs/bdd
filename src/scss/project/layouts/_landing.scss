@@ -5,11 +5,8 @@
 .landing {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   transition: all 0.3s ease;
-  @include medium {
-    height: 100%;
-  }
   &__img {
     width: 100%;
     height: 100%;
@@ -37,6 +34,12 @@
     top: 56px;
     right: 53px;
     z-index: zi(landing-logo);
+    transition: all 0.75s ease;
+    transition-delay: 0.05s;
+    .main-site--hide & {
+      opacity: 0;
+      visibility: hidden;
+    }
     @include large {
       width: 180px;
     }
@@ -76,6 +79,13 @@
       font-size: 2.3rem;
       line-height: 4rem;
       letter-spacing: 0.16em;
+      transition: all 0.75s ease;
+      transition-delay: 0.1s;
+      .main-site--hide & {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(2px);
+      }
       @include large {
         font-size: 1.6rem;
         line-height: 2.4rem;
@@ -94,6 +104,13 @@
       font-size: 1.7rem;
       line-height: 2.7rem;
       letter-spacing: 0.1em;
+      transition: all 0.75s ease;
+      transition-delay: 0.15s;
+      .main-site--hide & {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(3px);
+      }
       @include large {
         @include font-size(h2);
       }
@@ -108,6 +125,13 @@
     &__img {
       width: 100%;
       margin-bottom: 20px;
+      transition: all 0.75s ease;
+      transition-delay: 0.2s;
+      .main-site--hide & {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(4px);
+      }
       @include small {
         margin-bottom: 12px;
       }
@@ -118,6 +142,13 @@
       margin-bottom: 0;
       font-family: ff(secondary);
       letter-spacing: 0.2em;
+      transition: all 0.75s ease;
+      transition-delay: 0.25s;
+      .main-site--hide & {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(5px);
+      }
       @include large {
         font-size: 2.4rem;
         line-height: 3.2rem;

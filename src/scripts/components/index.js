@@ -10,9 +10,11 @@ import Search from "./Search";
 import Home from "./Home";
 import Sort from "./Sort";
 import Category from "./Category";
+import NavCategory from "./NavCategory";
 import Landing from "./Landing";
 import Single from "./Single";
 import Default from "./Default";
+import LoadImage from "./LoadImage";
 
 export {
   WindowResize,
@@ -25,4 +27,6 @@ export {
   Landing,
   Single,
   Default,
+  LoadImage,
+  NavCategory,
 };

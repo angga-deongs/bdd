@@ -17,7 +17,11 @@ const Header = (() => {
   // - handleCloseMobileMenu
   const handleCloseMobileMenu = () => {
     $(".js-close-mobile-menu").on("click", () => {
-      $("body").removeClass("show-navigation");
+      if ($(".header").hasClass("show-search")) {
+        $(".header").removeClass("show-search");
+      } else {
+        $("body").removeClass("show-navigation");
+      }
       Scrollable.enable();
     });
     $(".js-overlay").on("click", () => {

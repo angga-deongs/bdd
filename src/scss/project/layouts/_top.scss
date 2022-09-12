@@ -66,16 +66,16 @@
       @include font-size(h3-b);
       @include small {
         @include font-size(h6);
-        margin-left: 8px;
+        margin-left: 6px;
       }
       @include mq(408px) {
-        font-size: 1rem;
-      }
-      @include mq(370px) {
         font-size: 0.9rem;
       }
-      @include mq(342px) {
+      @include mq(370px) {
         font-size: 0.8rem;
+      }
+      @include mq(342px) {
+        font-size: 0.7rem;
       }
     }
   }
@@ -102,6 +102,7 @@
       }
     }
     &__bar {
+      text-align: right;
       opacity: 0;
       visibility: hidden;
       width: 218px;
@@ -116,6 +117,9 @@
       transform: translateX(-2px);
       @include font-size(h3-a);
       @include placeholder-color(color(secondary));
+      @include medium {
+        text-align: left;
+      }
     }
     &--show {
       #{$hs} {

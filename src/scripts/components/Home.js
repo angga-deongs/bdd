@@ -71,6 +71,17 @@ const Home = (() => {
         success: (data) => {
           const _data = $(data);
           _this.parents(".home__posts").find(".home__list").html(_data);
+          setTimeout(() => {
+            if ($(".card-primary__img__el").length) {
+              $(".card-primary__img__el").each((i, el) => {
+                $(el).imagesLoaded(() => {
+                  if (!$(el).parents(".card-primary").hasClass("is-visible")) {
+                    $(el).parents(".card-primary").addClass("is-visible");
+                  }
+                });
+              });
+            }
+          }, 100);
         },
         error: (data) => {},
       });

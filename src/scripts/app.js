@@ -13,6 +13,8 @@ import {
   Landing,
   Single,
   Default,
+  LoadImage,
+  NavCategory,
 } from "components";
 
 // --- App
@@ -24,6 +26,7 @@ const App = (() => {
 
   // --- show site content
   const showSiteContent = () => {
+    $(".landing").removeClass("main-site--hide");
     $(".js-main-site").removeClass("main-site--hide");
     // --- disable scroll
     Scrollable.enable();
@@ -51,6 +54,8 @@ const App = (() => {
       Landing.init();
       Single.init();
       Default.init();
+      LoadImage.init();
+      NavCategory.init();
     })(jQuery);
   };
 

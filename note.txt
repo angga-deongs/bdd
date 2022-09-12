@@ -72,12 +72,12 @@ Pages
 - Size Image [*]
 - Search Populated [*]
 - Single Share whatsapp [*]
-- Single link google play []
-- Single link app store []
 
 9
-- feedback []
-
+- feedback [*]
+- Single link google play []
+- Single link app store []
+- press realese []
 
 12
 
