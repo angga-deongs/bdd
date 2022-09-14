@@ -4,6 +4,7 @@
 
 .card-primary {
   $cp: &;
+  transition: all 0.3s ease;
   &.is-visible {
     #{$cp} {
       &__img__el {
@@ -11,6 +12,10 @@
         visibility: visible;
       }
     }
+  }
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
   }
   &__box {
     position: relative;

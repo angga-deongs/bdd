@@ -34,6 +34,7 @@
   }
   &__side,
   &__posts {
+    position: relative;
     height: 100vh;
     flex: 0 0 25%;
     border-right: 1px solid color(grey);
@@ -251,6 +252,7 @@
   }
   &__list {
     margin-bottom: 68px;
+    position: relative;
     @include medium {
       display: block;
       font-size: 0;
@@ -273,6 +275,10 @@
     @include small {
       margin-left: 20px;
     }
+    &.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
   &__copyright {
     display: none;
@@ -291,6 +297,19 @@
       @include small {
         @include font-size(h6);
       }
+    }
+  }
+  &__loading {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 185px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.2s ease;
+    &.is-visible {
+      opacity: 1;
+      visibility: visible;
     }
   }
   /* cards-scroll-x ----------------------------------------------------------- */
